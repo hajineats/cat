@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div>
-        Result: {result.map(e=><div>{e}</div>)}
+        Result is {result.map(e=><div>{e}</div>)}
     </div>
   );
 }
