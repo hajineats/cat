@@ -1,21 +1,17 @@
-import './App.css';
-import {useEffect, useState} from "react";
-import axios from 'axios';
+import TestScreen from "./pages/TestScreen";
+import styled from "styled-components";
+
+const Button = styled.button`
+  border: #61dafb 1px solid;
+`
+
 function App() {
-    const [result, setResult] = useState([]);
 
-    useEffect(()=>{
-
-        axios.get('/hello')
-            .then(r => setResult(r.data.data))
-
-    }, [])
-
-  return (
-    <div>
-        Result is {result.map(e=><div>{e}</div>)}
-    </div>
-  );
-}
+    return (
+        <>
+            <TestScreen />
+        </>
+    );
+};
 
 export default App;
