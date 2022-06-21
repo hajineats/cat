@@ -1,4 +1,3 @@
-
 import styled from "styled-components";
 import BottomBar from "../components/BottomBar";
 import TopBar from "../components/Topbar";
