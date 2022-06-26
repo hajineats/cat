@@ -18,11 +18,11 @@ public class UserController {
     @Autowired UserService userService;
 
     @PostMapping("/user")
-    public ResponseEntity createUser(@RequestParam(value="userId") Long userId){
+    public ResponseEntity createUser(@RequestBody Long userId){
         if(userService.createUser(userId)){
             return ResponseEntity.created(URI.create("/user/"+userId)).build();
         }
-        return ResponseEntity.status(HttpStatus.CONFLICT).build();
+        return ResponseEntity.status(HttpStatus.CONFLICT).body("User already exists");
     }
 
     @GetMapping("/user/{id}")

@@ -1,23 +1,18 @@
 package com.se701.cat.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Document("questions")
 public class Question {
     @Id
-    private String questionId;
+    private String id;
     private double difficultyParameter;
-    private String questionType;
-    private String questionContent;
+    private String type;
+    private String content;
     /**
      * MST module number this question belongs to
      * If the question does not belong to MST module, moduleNumber is null
@@ -34,28 +29,28 @@ public class Question {
         return questionOptions;
     }
 
-    public String getQuestionId() {
-        return questionId;
+    public String getId() {
+        return id;
     }
 
     public double getDifficultyParameter() {
         return difficultyParameter;
     }
 
-    public String getQuestionType() {
-        return questionType;
+    public String getType() {
+        return type;
     }
 
-    public String getQuestionContent() {
-        return questionContent;
+    public String getContent() {
+        return content;
     }
 
 
     public Question(String questionId, double difficultyParameter, String questionType, String questionContent, Integer moduleNumber, List<Option> questionOptions) {
-        this.questionId = questionId;
+        this.id = questionId;
         this.difficultyParameter = difficultyParameter;
-        this.questionType = questionType;
-        this.questionContent = questionContent;
+        this.type = questionType;
+        this.content = questionContent;
         this.moduleNumber = moduleNumber;
         this.questionOptions = questionOptions;
     }

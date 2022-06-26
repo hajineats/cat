@@ -42,7 +42,4 @@ public class QuestionController {
     public Question getQuestion(){
         return service.findQuestion("M123456");
     }
-
-
-
 }

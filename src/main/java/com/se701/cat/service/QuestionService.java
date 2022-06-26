@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class QuestionService {
@@ -18,6 +17,14 @@ public class QuestionService {
     }
 
     public Question findQuestion(String questionId){
-        return repository.findQuestionByQuestionId(questionId);
+        return repository.findById(questionId).get();
+    }
+
+    public List<Question> getFixedLengthQuestions() {
+        return repository.findAllByModuleNumber(null);
+    }
+
+    public List<Question> getMultistageQuestions(Integer moduleNumber) {
+        return repository.findAllByModuleNumber(moduleNumber);
     }
 }
