@@ -3,66 +3,30 @@ package com.se701.cat.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.*;
 
+@Document("users")
 public class User {
-    public static final int DEFAULT_STAGE = 1;
 
+    public enum TestType { MST, FL}
+
+    public static final int DEFAULT_STAGE = 1;
     @Id
-    public String id;
-    private final String username;
+    public Long id;
     private int currentModule = DEFAULT_STAGE;
-    @JsonIgnore
-    private Queue<String> shouldTakes = new LinkedList<>();
-    @JsonIgnore
+    private List<TestType> shouldTakes = new LinkedList<>();
+
     private int fixedScore;
-    @JsonIgnore
     private int mstScore;
-    @JsonIgnore
     private Map<String, String> fixedTestResponses = new HashMap<>();
-    @JsonIgnore
     private Map<String, String> mstTestResponses = new HashMap<>();
 
-    @JsonProperty("shouldTakes")
-    public List<String> getShouldTakes(){
-        return List.copyOf(shouldTakes);
-    }
 
-    @JsonProperty("scores")
-    public Map<String, Integer> getScores(){
-        Map<String, Integer> map = new HashMap<>();
-        map.put("mst", mstScore);
-        map.put("fixed", fixedScore);
-        return map;
+    public List<TestType> getShouldTakes() {
+        return shouldTakes;
     }
-
-    @JsonProperty("responses")
-    public Map<String, Map<String, String>> getResponses(){
-        Map<String, Map<String, String>> map = new HashMap<>();
-        map.put("mst", mstTestResponses);
-        map.put("fixed", fixedTestResponses);
-        return map;
-    }
-
-    public void addShouldTakes(String shouldTake){
-        shouldTakes.offer(shouldTake);
-    }
-
-    /**
-     * @return null if queue is empty
-     */
-    public String currentShouldTake(){
-        return shouldTakes.peek();
-    }
-
-    /**
-     * @return null if queue is empty
-     */
-    public String popShouldTake(){
-        return shouldTakes.poll();
-    }
-
 
     public int getCurrentModule() {
         return currentModule;
@@ -104,9 +68,10 @@ public class User {
         mstTestResponses.put(questionId, answer);
     }
 
-    public User(String username, int fixedScore, int mstScore) {
-        this.username = username;
+    public User(Long id, int fixedScore, int mstScore, List<TestType> shouldTakes) {
+        this.id = id;
         this.fixedScore = fixedScore;
         this.mstScore = mstScore;
+        this.shouldTakes = shouldTakes;
     }
 }

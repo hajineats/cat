@@ -1,6 +1,7 @@
 package com.se701.cat.controller;
 
 import com.se701.cat.entity.Question;
+import com.se701.cat.entity.Question.Option;
 import com.se701.cat.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -11,8 +12,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.awt.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @CrossOrigin
@@ -25,9 +27,10 @@ public class QuestionController {
     @ResponseBody
     public String createQuestion(){
 
-        Map<String, String> options = new HashMap<>();
+        List<Option> options = new ArrayList<>();
         for (int i = 1; i <= 4; i++) {
-            options.put("OptionIdIs" + i, "sin(" + i * 17 + ")");
+            Option option = new Option("OptionIdIs" + i, "sin(" + i * 17 + ")");
+            options.add(option);
         }
 
         service.createQuestion("M123456", 0.5, "MST", "lol this is a question. what is a question?", options);
@@ -39,6 +42,7 @@ public class QuestionController {
     public Question getQuestion(){
         return service.findQuestion("M123456");
     }
+
 
 
 }
