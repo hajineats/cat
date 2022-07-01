@@ -7,14 +7,13 @@ import com.mongodb.MongoDriverInformation;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.internal.MongoClientImpl;
+import com.se701.cat.dto.QuestionDTO;
 import com.se701.cat.entity.User;
 import com.se701.cat.respository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -43,4 +42,11 @@ public class SomeController {
         map.put("data", a);
         return map;
     }
+
+    @PostMapping("/someRoute")
+    public ResponseEntity lol(@RequestBody QuestionDTO body){
+        System.out.println("body = " + body);
+        return ResponseEntity.ok().build();
+    }
+
 }

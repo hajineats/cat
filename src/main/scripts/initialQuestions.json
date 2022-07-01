@@ -1,0 +1,29 @@
+{
+  "questions": [
+    {
+      "id": "M00001",
+      "difficultyParameter": 0.1,
+      "type": "MCQ",
+      "moduleNumber": 1,
+      "content": "This is question content",
+      "options": {
+        "op1": "option 1",
+        "op2": "option 2",
+        "op3": "option 3",
+        "op4": "option 4"
+      }
+    },
+    {
+      "id": "M00002",
+      "difficultyParameter": 0.4,
+      "type": "Short Answer",
+      "moduleNumber": 2,
+      "content": "This is not a question content",
+      "options": {
+        "op1": "option 1",
+        "op2": "option 2",
+        "op3": "option 3",
+        "op4": "option 4"
+      }
+    }]
+}

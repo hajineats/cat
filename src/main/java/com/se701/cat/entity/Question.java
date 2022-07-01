@@ -46,11 +46,11 @@ public class Question {
     }
 
 
-    public Question(String questionId, double difficultyParameter, String questionType, String questionContent, Integer moduleNumber, List<Option> questionOptions) {
-        this.id = questionId;
+    public Question(String id, double difficultyParameter, String type, String content, Integer moduleNumber, List<Option> questionOptions) {
+        this.id = id;
         this.difficultyParameter = difficultyParameter;
-        this.type = questionType;
-        this.content = questionContent;
+        this.type = type;
+        this.content = content;
         this.moduleNumber = moduleNumber;
         this.questionOptions = questionOptions;
     }

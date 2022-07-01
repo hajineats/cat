@@ -1,45 +1,59 @@
 package com.se701.cat.controller;
 
+import com.se701.cat.dto.QuestionListDTO;
 import com.se701.cat.entity.Question;
-import com.se701.cat.entity.Question.Option;
 import com.se701.cat.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.ArrayList;
-import java.util.HashMap;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import java.util.List;
-import java.util.Map;
 
 @CrossOrigin
-@Controller
+@RestController
+@RequestMapping("questions")
 public class QuestionController {
     @Autowired
     QuestionService service;
 
-    @PostMapping("/question")
-    @ResponseBody
-    public String createQuestion(){
+    /**
+     * Populates the Questions collection with a list of questions.
+     * @param body DTO containing a list of questions
+     */
+    @PostMapping
+    public ResponseEntity populateQuestions(@RequestBody QuestionListDTO body){
+        service.persistQuestions(body.toDomainObject());
+        return ResponseEntity.ok().build();
+    }
 
-        List<Option> options = new ArrayList<>();
-        for (int i = 1; i <= 4; i++) {
-            Option option = new Option("OptionIdIs" + i, "sin(" + i * 17 + ")");
-            options.add(option);
+    /**
+     * Retrieves a question of the specified id
+     */
+    @GetMapping(value = "{id}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<Question> getQuestion(@PathVariable String id){
+        Question question = service.findQuestion(id);
+        if (question == null) {
+            return ResponseEntity.notFound().build();
         }
-
-        service.createQuestion("M123456", 0.5, "MST", "lol this is a question. what is a question?", options);
-        return "success@";
+        return ResponseEntity.ok(question);
     }
 
-    @GetMapping(value = "/question", produces = {MediaType.APPLICATION_JSON_VALUE})
-    @ResponseBody
-    public Question getQuestion(){
-        return service.findQuestion("M123456");
+    /**
+     * Retrieves all the questions
+     */
+    @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<List<Question>> getAllQuestions(){
+        return ResponseEntity.ok(service.findAllQuestions());
     }
+
+    /**
+     * Deletes all the questions
+     */
+    @DeleteMapping
+    public ResponseEntity deleteAllQuestions(){
+        service.deleteAllQuestions();
+        return ResponseEntity.ok().build();
+    }
+
+
 }
