@@ -12,8 +12,8 @@ public class QuestionService {
     @Autowired
     QuestionRepository repository;
 
-    public void createQuestion(String questionId, double difficultyParameter, String questionType, String questionContent, List<Question.Option> options){
-        Question newQuestion = new Question(questionId, difficultyParameter,questionType, questionContent, null, options);
+    public void createQuestion(String questionId, double difficultyParameter, String questionType, String questionContent, List<Question.Option> options, String correctAnswer){
+        Question newQuestion = new Question(questionId, difficultyParameter,questionType, questionContent, null, options, correctAnswer);
         repository.save(newQuestion);
     }
 
@@ -43,11 +43,15 @@ public class QuestionService {
         return repository.findAll();
     }
 
-    public List<Question> getFixedLengthQuestions() {
+    public List<Question> findAllFixedLengthQuestions() {
         return repository.findAllByModuleNumber(null);
     }
 
-    public List<Question> getMultistageQuestions(Integer moduleNumber) {
+    public List<Question> findAllMultistageQuestions()  {
+        return repository.findAllByModuleNumberNotNull();
+    }
+
+    public List<Question> findAllMultistageQuestionsByModuleNumber(Integer moduleNumber) {
         return repository.findAllByModuleNumber(moduleNumber);
     }
 

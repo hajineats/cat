@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
-import java.util.Map;
 
 @CrossOrigin
 @Controller
@@ -27,7 +26,7 @@ public class FixedLengthTestController {
 
     @GetMapping("/fixedlength")
     public ResponseEntity<List<Question>> getQuestions() {
-        return ResponseEntity.ok(questionService.getFixedLengthQuestions());
+        return ResponseEntity.ok(questionService.findAllFixedLengthQuestions());
     }
 
     @PostMapping("/fixedlength")

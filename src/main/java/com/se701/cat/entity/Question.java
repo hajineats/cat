@@ -20,6 +20,17 @@ public class Question {
     private Integer moduleNumber;
     private List<Option> questionOptions = new ArrayList<>();
 
+    private String correctAnswer;
+
+    public Question(String id, double difficultyParameter, String type, String content, Integer moduleNumber, List<Option> questionOptions, String correctAnswer) {
+        this.id = id;
+        this.difficultyParameter = difficultyParameter;
+        this.type = type;
+        this.content = content;
+        this.moduleNumber = moduleNumber;
+        this.questionOptions = questionOptions;
+        this.correctAnswer = correctAnswer;
+    }
 
     public Integer getModuleNumber() {
         return moduleNumber;
@@ -45,15 +56,14 @@ public class Question {
         return content;
     }
 
-
-    public Question(String id, double difficultyParameter, String type, String content, Integer moduleNumber, List<Option> questionOptions) {
-        this.id = id;
-        this.difficultyParameter = difficultyParameter;
-        this.type = type;
-        this.content = content;
-        this.moduleNumber = moduleNumber;
-        this.questionOptions = questionOptions;
+    public String getCorrectAnswer() {
+        return correctAnswer;
     }
+
+    public void setCorrectAnswer(String correctAnswer) {
+        this.correctAnswer = correctAnswer;
+    }
+
     public static class Option{
         private String optionId;
         private String optionString;

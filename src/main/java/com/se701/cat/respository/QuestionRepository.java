@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface QuestionRepository extends MongoRepository<Question, String> {
     public List<Question> findAllByModuleNumber(Integer moduleNumber);
+
+    public List<Question> findAllByModuleNumberNotNull();
 }

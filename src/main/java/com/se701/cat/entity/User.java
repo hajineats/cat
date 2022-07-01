@@ -9,17 +9,14 @@ import java.util.*;
 
 @Document("users")
 public class User {
-
-    public enum TestType { MST, FL}
-
-    public static final int DEFAULT_STAGE = 1;
+    public static final int DEFAULT_STAGE = 0;
     @Id
     public Long id;
     private int currentModule = DEFAULT_STAGE;
     private List<TestType> shouldTakes = new LinkedList<>();
 
     private int fixedScore;
-    private int mstScore;
+    private double mstScore;
     private Map<String, String> fixedTestResponses = new HashMap<>();
     private Map<String, String> mstTestResponses = new HashMap<>();
 
@@ -44,11 +41,11 @@ public class User {
         this.fixedScore = fixedScore;
     }
 
-    public int getMstScore() {
+    public double getMstScore() {
         return mstScore;
     }
 
-    public void setMstScore(int mstScore) {
+    public void setMstScore(double mstScore) {
         this.mstScore = mstScore;
     }
 

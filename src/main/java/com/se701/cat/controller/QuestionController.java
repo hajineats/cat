@@ -54,6 +54,4 @@ public class QuestionController {
         service.deleteAllQuestions();
         return ResponseEntity.ok().build();
     }
-
-
 }

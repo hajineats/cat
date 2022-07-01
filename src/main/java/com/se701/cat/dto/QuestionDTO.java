@@ -15,7 +15,9 @@ public class QuestionDTO{
     String content;
     Map<String, String> options;
 
-    public QuestionDTO(String id, double difficultyParameter, String type, int moduleNumber, String content, Map<String, String> options) {
+    String correctAnswer;
+
+    public QuestionDTO(String id, double difficultyParameter, String type, int moduleNumber, String content, Map<String, String> options, String correctAnswer) {
         this.id = id;
         this.difficultyParameter = difficultyParameter;
         this.type = type;
@@ -26,7 +28,7 @@ public class QuestionDTO{
 
     public Question toDomainObject() {
         List<Question.Option> optionList = options.entrySet().stream().map(e -> new Question.Option(e.getKey(), e.getValue())).collect(Collectors.toList());
-        return new Question(id, difficultyParameter, type, content, moduleNumber, optionList);
+        return new Question(id, difficultyParameter, type, content, moduleNumber, optionList, correctAnswer);
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.se701.cat.service;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoDatabase;
 import com.se701.cat.MongoConfig;
+import com.se701.cat.entity.TestType;
 import com.se701.cat.entity.User;
 import com.se701.cat.respository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,11 +31,14 @@ public class UserService {
         if(repository.existsById(id)){
             return false;
         }
-        User user = new User(id, 0, 0, List.of(User.TestType.FL, User.TestType.MST));
+        User user = new User(id, 0, 0, List.of(TestType.FL, TestType.MST));
         repository.save(user);
         return true;
     }
 
+    public void updateUser(User user) {
+        repository.save(user);
+    }
 
     public User findUserById(Long id) {
         Optional<User> userOptional = repository.findById(id);
