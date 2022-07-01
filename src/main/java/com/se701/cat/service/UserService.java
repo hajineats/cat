@@ -24,16 +24,23 @@ public class UserService {
 
     /**
      * Creates a user
+     *
      * @param id new user's id
      * @return true if successfully created, false if there's conflict or error
      */
-    public boolean createUser(Long id) {
-        if(repository.existsById(id)){
+    public boolean createUser(Long id, boolean takeMSTFirst) {
+        if (repository.existsById(id)) {
             return false;
         }
-        User user = new User(id, 0, 0, List.of(TestType.FL, TestType.MST));
+        List<TestType> mstFirst = List.of(TestType.MST, TestType.FL);
+        List<TestType> flFirst = List.of(TestType.FL, TestType.MST);
+        User user = new User(id, 0, 0, takeMSTFirst ? mstFirst : flFirst);
         repository.save(user);
         return true;
+    }
+
+    public void deleteAllUsers(){
+        repository.deleteAll();
     }
 
     public void updateUser(User user) {
