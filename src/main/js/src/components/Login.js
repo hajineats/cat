@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
+import {useContext, useState} from "react";
+import {AppContext} from "../contexts/AppContext";
 
 const Container = styled.div`
   margin: auto;
@@ -31,18 +34,25 @@ const TextInput = styled.input`
   padding: 12px 20px;
 `
 
-const SubmitInput = styled.input`
+const SubmitInput = styled.button`
   height: 32px;
   width: 84px;
 `
 
 const Login = () => {
+    const {handleLogin} = useContext(AppContext)
+    const [userInput, setUserInput] = useState("")
+
     return (
         <Container>
             <Header></Header>
             <Form>
-                <TextInput type="text"/>
-                <SubmitInput type="submit"/>
+                <TextInput type="text" onChange={(e)=>{
+                    setUserInput(e.target.value)
+                }} />
+                <SubmitInput onClick={(e)=>{
+                    e.preventDefault()
+                    handleLogin(userInput)}}/>
             </Form>
         </Container>
     )

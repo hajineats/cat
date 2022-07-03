@@ -24,10 +24,10 @@ export const assertObject = (param) =>{
 }
 
 export const handleError = async (error) => {
-	if (!error?.response) {
-		throw new Error(
-			'The server seems to be down :(  Try again later.',
-		);
-	}
-	throw new Error(`${error.response.data.message}`)
+	// if (!error?.response) {
+	// 	throw new Error(
+	// 		'The server seems to be down :(  Try again later.',
+	// 	);
+	// }
+	// throw new Error(`${error.response.data.message}`)
 }

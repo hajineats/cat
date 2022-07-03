@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import Question from "./Question";
-import Sidebar from "./Sidebar";
+import Question from "./question/Question";
+import Sidebar from "./sidebar/Sidebar";
+import {useContext, useState} from "react";
+import {AppContext} from "../contexts/AppContext";
 
 const Container = styled.div`
 	display: grid;

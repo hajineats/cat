@@ -2,6 +2,8 @@ import styled from "styled-components";
 import BottomBar from "../components/BottomBar";
 import TopBar from "../components/Topbar";
 import TestContent from "../components/TestContent";
+import {useContext, useState} from "react";
+import {AppContext} from "../contexts/AppContext";
 
 
 const Container = styled.div`
