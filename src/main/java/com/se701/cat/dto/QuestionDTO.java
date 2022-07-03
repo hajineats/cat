@@ -24,6 +24,7 @@ public class QuestionDTO{
         this.moduleNumber = moduleNumber;
         this.content = content;
         this.options = options;
+        this.correctAnswer = correctAnswer;
     }
 
     public Question toDomainObject() {
