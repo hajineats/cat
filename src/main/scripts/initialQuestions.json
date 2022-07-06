@@ -1,17 +1,45 @@
 {
   "questions": [
     {
-      "id": "M00001",
+      "id": "M032064",
       "difficultyParameter": 0.1,
       "type": "MCQ",
       "correctAnswer": "op1",
-      "moduleNumber": 2,
-      "content": "This is question content",
+      "moduleNumber": 0,
+      "content": "Ann and Jenny divide 560 zeds between them. If Jenny gets 3/8 of the money, how many zeds will Ann get?",
       "options": {
-        "op1": "option 1",
-        "op2": "option 2",
-        "op3": "option 3",
-        "op4": "option 4"
+        "op1": "350",
+        "op2": "210",
+        "op3": "5/8",
+        "op4": "None of the above"
+      }
+    },
+    {
+      "id": "M032094",
+      "difficultyParameter": 0.1,
+      "type": "MCQ",
+      "correctAnswer": "op1",
+      "moduleNumber": 0,
+      "content": "4/100 + 3/1000 =",
+      "options": {
+        "op1": "0.043",
+        "op2": "0.1043",
+        "op3": "0.403",
+        "op4": "0.43"
+      }
+    },
+    {
+      "id": "M032166",
+      "difficultyParameter": 0.1,
+      "type": "MCQ",
+      "correctAnswer": "op1",
+      "moduleNumber": 0,
+      "content": "Which of these is the BEST estimate of (7.21*3.86)/10.09?",
+      "options": {
+        "op1": "1234",
+        "op2": "5678",
+        "op3": "91011",
+        "op4": "None of the above"
       }
     },
     {

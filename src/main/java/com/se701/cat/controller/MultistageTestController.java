@@ -11,17 +11,15 @@ import com.se701.cat.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 @CrossOrigin
-@Controller
+@RestController
+@RequestMapping("mst")
 public class MultistageTestController {
     private static final int NUM_OF_ITEM_PARAMETERS = 4;
     private static final int NUM_OF_MODULES = 4;
@@ -54,7 +52,7 @@ public class MultistageTestController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/multistage/{moduleId}")
+    @GetMapping("{moduleId}")
     public ResponseEntity<List<Question>> getModuleQuestions(@PathVariable Integer moduleId) {
         return ResponseEntity.ok(questionService.findAllMultistageQuestionsByModuleNumber(moduleId));
     }
@@ -63,7 +61,7 @@ public class MultistageTestController {
      * @param testResponseDTO
      * @return the number of the next module or null if the test is complete
      */
-    @PostMapping("/multistage")
+    @PostMapping()
     public ResponseEntity submitResults(TestResponseDTO testResponseDTO) {
         User user = userService.findUserById(testResponseDTO.getUserId());
         if (user == null) {

@@ -16,15 +16,15 @@ const Content = styled.div`
   height: 200px;
 `
 export const QuestionArea = () => {
-	const {title, content} = useContext(AppContext)
+	const {currentQuestion} = useContext(AppContext)
 
 	return (
 		<Container>
 			<Header>
-				{title}
+				{currentQuestion.id}
 			</Header>
 			<Content>
-				{content}
+				{currentQuestion.content}
 			</Content>
 		</Container>
 	)

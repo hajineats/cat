@@ -4,7 +4,6 @@ import {useNavigate} from "react-router-dom";
 import fakeQuestions from '../utils/fakeData.json'
 
 
-
 const AppContext = React.createContext([])
 
 const AppContextProvider = ({children})=>{
@@ -32,12 +31,7 @@ const AppContextProvider = ({children})=>{
 
 
 	const handleLogin = async (userId)=>{
-		// const user = await getUserDocument(userId)
-		const user = {
-			userId: Number(userId),
-			shouldTakes: ["MST", "FL"],
-			currentModule: 0,
-		}
+		const user = await getUserDocument(userId)
 		setUserDocument(user)
 
 		if (user.shouldTakes.length === 0) {
@@ -46,10 +40,12 @@ const AppContextProvider = ({children})=>{
 			return;
 		}
 
-		// const questions = user.shouldTakes[0] === "FL" ?
-		// 	await getFLQuestionSet() :
-		// 	await getMSTModuleByModuleNumber(user.currentModule);
-		// setCurrentQuestions(fakeQuestions)
+		const questions = user.shouldTakes[0] === "FL" ?
+			await getFLQuestionSet() :
+			await getMSTModuleByModuleNumber(user.currentModule);
+
+		console.log(questions)
+		setCurrentQuestions(questions)
 		navigate("/test")
 	}
 

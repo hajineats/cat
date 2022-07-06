@@ -65,7 +65,7 @@ public class User {
         mstTestResponses.put(questionId, answer);
     }
 
-    public User(Long id, int fixedScore, int mstScore, List<TestType> shouldTakes) {
+    public User(Long id, int fixedScore, double mstScore, List<TestType> shouldTakes) {
         this.id = id;
         this.fixedScore = fixedScore;
         this.mstScore = mstScore;
