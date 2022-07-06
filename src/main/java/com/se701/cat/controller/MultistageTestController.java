@@ -62,14 +62,14 @@ public class MultistageTestController {
      * @return the number of the next module or null if the test is complete
      */
     @PostMapping()
-    public ResponseEntity submitResults(TestResponseDTO testResponseDTO) {
+    public ResponseEntity submitResults(@RequestBody TestResponseDTO testResponseDTO) {
         User user = userService.findUserById(testResponseDTO.getUserId());
         if (user == null) {
             return ResponseEntity.notFound().build();
         }
 
         if (user.getShouldTakes().isEmpty() || user.getShouldTakes().get(0) == TestType.FL) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.badRequest().body("User should not be taking the MST test");
         }
 
         userService.addUserResponses(true, testResponseDTO.getResponses(), user);
@@ -95,6 +95,7 @@ public class MultistageTestController {
     private double calculateAbilityEstimate(Map<String, String> mstResponses, List<Question> questionBank) {
         double[][] itemBank = initialise1PLItemBank(mstResponses.size());
         double[] responses = new double[mstResponses.size()];
+
         int index = 0;
         for (String questionId : mstResponses.keySet()) {
             Question q = questionBank
@@ -157,7 +158,9 @@ public class MultistageTestController {
 
         caller.setRCode(code);
         caller.runAndReturnResult("nextModuleResult");
-        return caller.getParser().getAsIntArray("nextModuleResult")[0];
+        return caller
+                .getParser()
+                .getAsIntArray("nextModuleResult")[0] - 1; // Convert from 1-indexed back to 0-indexed
     }
 
     private double[][] initialise1PLItemBank(int itemCount) {
