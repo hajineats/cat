@@ -41,14 +41,5 @@
         "op3": "91011",
         "op4": "None of the above"
       }
-    },
-    {
-      "id": "M00002",
-      "difficultyParameter": 0.4,
-      "type": "Short Answer",
-      "correctAnswer": "op1",
-      "moduleNumber": 2,
-      "content": "This is not a question content",
-      "options": {}
     }]
 }

@@ -1,0 +1,31 @@
+{
+  "questions": [
+    {
+      "id": "M90001",
+      "difficultyParameter": 0.1,
+      "type": "MCQ",
+      "correctAnswer": "op1",
+      "moduleNumber": -1,
+      "content": "Fixed Length Ann and Jenny divide 560 zeds between them. If Jenny gets 3/8 of the money, how many zeds will Ann get?",
+      "options": {
+        "op1": "350",
+        "op2": "210",
+        "op3": "5/8",
+        "op4": "None of the above"
+      }
+    },
+    {
+      "id": "M90002",
+      "difficultyParameter": 0.1,
+      "type": "MCQ",
+      "correctAnswer": "op1",
+      "moduleNumber": -1,
+      "content": "Fixed Length 4/100 + 3/1000 =",
+      "options": {
+        "op1": "0.043",
+        "op2": "0.1043",
+        "op3": "0.403",
+        "op4": "0.43"
+      }
+    }]
+}

@@ -44,7 +44,7 @@ public class QuestionService {
     }
 
     public List<Question> findAllFixedLengthQuestions() {
-        return repository.findAllByModuleNumber(null);
+        return repository.findAllByModuleNumber(Question.FIXED_LENGTH_MODULE_NUMBER);
     }
 
     public List<Question> findAllMultistageQuestions()  {

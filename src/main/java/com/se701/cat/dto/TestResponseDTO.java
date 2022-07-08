@@ -11,6 +11,10 @@ public class TestResponseDTO {
         this.responses = responses;
     }
 
+    public TestResponseDTO(){
+
+    }
+
     public Long getUserId() {
         return userId;
     }

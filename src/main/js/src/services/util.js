@@ -6,6 +6,7 @@ const INCORRECT_TYPES = "Parameters types are invalid"
 const baseUrl = "http://localhost:8080/"
 export const getData = async (url)=> {
 	const res = await axios.get(`${baseUrl}${url}`).catch(handleError)
+	console.log("fetched data from", `${baseUrl}${url}`, res.data)
 	return res.data
 }
 
@@ -25,11 +26,11 @@ export const assertObject = (param) =>{
 }
 
 export const handleError = async (error) => {
-	if (!error?.response) {
-		throw error
-		// throw new Error(
-		// 	'The server seems to be down :(  Try again later.',
-		// );
-	}
-	throw new Error(`${error.response.data.message}`)
+	throw error
+	// if (!error?.response) {
+	// 	// throw new Error(
+	// 	// 	'The server seems to be down :(  Try again later.',
+	// 	// );
+	// }
+	// throw new Error(`${error.response.data.message}`)
 }

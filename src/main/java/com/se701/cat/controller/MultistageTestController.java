@@ -62,7 +62,7 @@ public class MultistageTestController {
      * @return the number of the next module or null if the test is complete
      */
     @PostMapping()
-    public ResponseEntity submitResults(TestResponseDTO testResponseDTO) {
+    public ResponseEntity submitResults(@RequestBody TestResponseDTO testResponseDTO) {
         User user = userService.findUserById(testResponseDTO.getUserId());
         if (user == null) {
             return ResponseEntity.notFound().build();

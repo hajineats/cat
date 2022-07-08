@@ -22,15 +22,9 @@ const Instructions = styled.div`
   flex: 0 0 600px;
 `
 
-const ConfirmInput = styled.button`
-  height: 32px;
-  width: 96px;
-`
 
-const InstructionScreen = () => {
-    const {beginTest} = useContext(AppContext)
-
-    const {state} = useLocation()
+const EndScreen = () => {
+    const {state} = useLocation();
 
     return (
         <Container>
@@ -42,15 +36,9 @@ const InstructionScreen = () => {
             </Content>
 
             <BottomBar>
-                <ConfirmInput onClick={(e) => {
-                    e.preventDefault();
-                    beginTest();
-                }}>
-                    Confirm
-                </ConfirmInput>
             </BottomBar>
         </Container>
     )
 }
 
-export default InstructionScreen
+export default EndScreen

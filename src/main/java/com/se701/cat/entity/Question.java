@@ -8,6 +8,7 @@ import java.util.List;
 
 @Document("questions")
 public class Question {
+    public static final int FIXED_LENGTH_MODULE_NUMBER = -1;
     @Id
     private String id;
     private double difficultyParameter;
@@ -15,7 +16,7 @@ public class Question {
     private String content;
     /**
      * MST module number this question belongs to
-     * If the question does not belong to MST module, moduleNumber is null
+     * If the question does not belong to MST module, moduleNumber is -1
      */
     private Integer moduleNumber;
     private List<Option> questionOptions = new ArrayList<>();

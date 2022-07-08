@@ -13,15 +13,21 @@ export const getMSTModuleByModuleNumber = async (moduleNumber) => {
 }
 
 export const submitFLResult = async (userId, responses) => {
-	assertNumber(userId)
-	assertObject(responses)
-	return postData("fixed", {userId,responses})
+	const body = {
+		userId: userId,
+		responses: responses
+	}
+	console.log("post /fixed with body", body)
+	return postData("fixed", body)
 }
 
 export const submitMSTResult = async (userId, responses) => {
-	assertNumber(userId)
-	assertObject(responses)
-	return postData("mst", {userId,responses})
+	const body = {
+		userId: userId,
+		responses: responses
+	}
+	console.log("post /mst with body", body)
+	return postData("mst", body)
 }
 
 
