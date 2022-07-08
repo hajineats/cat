@@ -44,28 +44,25 @@ const AppContextProvider = ({children}) => {
 	}
 
 	const handleTestSubmission = async () => {
-		let user = await getUserDocument(userDocument.id)
-
 		// submit responses
-		if (user.shouldTakes[0] === "FL") {
+		if (userDocument.shouldTakes[0] === "FL") {
 			await submitFLResult(userDocument.id, userResponses)
 		} else {
 			await submitMSTResult(userDocument.id, userResponses)
 		}
 
 		// set user document
-		user = await getUserDocument(userDocument.id)
-		setUserDocument(user)
+		const updatedUserDoc = await getUserDocument(userDocument.id)
+		setUserDocument(updatedUserDoc)
 
 		// if the user has remaining shouldTakes, it's either the student needs to do second part of MST or has to come back on day 2
-		showInstructionAfterTestSubmission(user)
+		showInstructionAfterTestSubmission(updatedUserDoc)
 	}
 
 	const beginTest = async () => {
-		const user = await getUserDocument(userDocument.id)
-		const questions = user.shouldTakes[0] === "FL" ?
+		const questions = userDocument.shouldTakes[0] === "FL" ?
 			await getFLQuestionSet() :
-			await getMSTModuleByModuleNumber(user.currentModule);
+			await getMSTModuleByModuleNumber(userDocument.currentModule);
 
 		setQuestionList(questions)
 		setCurrentQuestion(questions[0])

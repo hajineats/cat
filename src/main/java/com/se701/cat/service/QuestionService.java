@@ -48,7 +48,7 @@ public class QuestionService {
     }
 
     public List<Question> findAllMultistageQuestions()  {
-        return repository.findAllByModuleNumberNotNull();
+        return repository.findAllByModuleNumberGreaterThanEqual(0);
     }
 
     public List<Question> findAllMultistageQuestionsByModuleNumber(Integer moduleNumber) {
