@@ -9,13 +9,13 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class QuestionDTO{
-    String id;
-    double difficultyParameter;
-    QuestionType type;
-    int moduleNumber;
-    String content;
-    Map<String, String> options;
-    String correctAnswer;
+    private String id;
+    private double difficultyParameter;
+    private QuestionType type;
+    private int moduleNumber;
+    private String content;
+    private Map<String, String> options;
+    private String correctAnswer;
 
     public String getId() {
         return id;

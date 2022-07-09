@@ -1,7 +1,7 @@
 package com.se701.cat.dto;
 
 public class CreateUserDTO {
-    int numOfUsers;
+    private int numOfUsers;
 
     public int getNumOfUsers() {
         return numOfUsers;
