@@ -75,13 +75,12 @@ public class MultistageTestController {
         userService.addUserResponses(true, testResponseDTO.getResponses(), user);
 
         Map<String, String> mstResponses = user.getMstTestResponses();
-        List<Question> allQuestions = questionService.findAllQuestions();
-        double abilityEstimate = calculateAbilityEstimate(mstResponses, allQuestions);
+        List<Question> allMultistageQuestions = questionService.findAllMultistageQuestions();
+        double abilityEstimate = calculateAbilityEstimate(mstResponses, allMultistageQuestions);
         user.setMstScore(abilityEstimate);
 
         boolean finished = user.getCurrentModule() != User.DEFAULT_STAGE;
         if (!finished) {
-            List<Question> allMultistageQuestions = questionService.findAllMultistageQuestions();
             int nextModule = calculateNextModule(abilityEstimate, mstResponses, allMultistageQuestions);
             user.setCurrentModule(nextModule);
         } else {
@@ -104,7 +103,7 @@ public class MultistageTestController {
                     .findAny()
                     .orElseThrow();
             itemBank[index][DIFFICULTY_PARAMETER] = q.getDifficultyParameter();
-            responses[index] = q.getCorrectAnswer().equals(mstResponses.get(questionId)) ? 1 : 0;
+            responses[index] = q.getCorrectAnswer().equalsIgnoreCase(mstResponses.get(questionId)) ? 1 : 0;
             index++;
         }
 

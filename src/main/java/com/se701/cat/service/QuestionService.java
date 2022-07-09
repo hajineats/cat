@@ -12,10 +12,10 @@ public class QuestionService {
     @Autowired
     QuestionRepository repository;
 
-    public void createQuestion(String questionId, double difficultyParameter, String questionType, String questionContent, List<Question.Option> options, String correctAnswer){
-        Question newQuestion = new Question(questionId, difficultyParameter,questionType, questionContent, null, options, correctAnswer);
-        repository.save(newQuestion);
-    }
+//    public void createQuestion(String questionId, double difficultyParameter, String questionType, String questionContent, List<Question.Option> options, String correctAnswer){
+//        Question newQuestion = new Question(questionId, difficultyParameter,questionType, questionContent, null, options, correctAnswer);
+//        repository.save(newQuestion);
+//    }
 
     public void persistQuestions(List<Question> questions){
         for (Question question : questions) {

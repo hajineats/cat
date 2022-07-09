@@ -3,7 +3,7 @@
     {
       "id": "M10001",
       "difficultyParameter": 0.1,
-      "type": "MCQ",
+      "type": "MULTIPLE_CHOICE",
       "correctAnswer": "op1",
       "moduleNumber": 1,
       "content": "Module 1 Ann and Jenny divide 560 zeds between them. If Jenny gets 3/8 of the money, how many zeds will Ann get?",
@@ -17,7 +17,7 @@
     {
       "id": "M10002",
       "difficultyParameter": 0.1,
-      "type": "MCQ",
+      "type": "MULTIPLE_CHOICE",
       "correctAnswer": "op1",
       "moduleNumber": 1,
       "content": "Module 1 4/100 + 3/1000 =",

@@ -14,8 +14,7 @@ public class User {
     public Long id;
     private int currentModule = DEFAULT_STAGE;
     private List<TestType> shouldTakes = new LinkedList<>();
-
-    private int fixedScore;
+    private double fixedScore;
     private double mstScore;
     private Map<String, String> fixedTestResponses = new HashMap<>();
     private Map<String, String> mstTestResponses = new HashMap<>();
@@ -33,11 +32,11 @@ public class User {
         this.currentModule = currentModule;
     }
 
-    public int getFixedScore() {
+    public double getFixedScore() {
         return fixedScore;
     }
 
-    public void setFixedScore(int fixedScore) {
+    public void setFixedScore(double fixedScore) {
         this.fixedScore = fixedScore;
     }
 

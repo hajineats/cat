@@ -7,11 +7,6 @@ import java.util.stream.Collectors;
 
 public class QuestionListDTO {
     List<QuestionDTO> questions;
-    public QuestionListDTO() {}
-
-    public QuestionListDTO(List<QuestionDTO> questions) {
-        this.questions = questions;
-    }
 
     public List<QuestionDTO> getQuestions() {
         return questions;
