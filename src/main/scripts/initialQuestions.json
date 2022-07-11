@@ -22,5 +22,29 @@
       "moduleNumber": 2,
       "content": "This is not a question content",
       "options": {}
-    }]
+    },
+    {
+      "id": "M00003",
+      "difficultyParameter": 0.4,
+      "type": "SHORT_ANSWER",
+      "correctAnswer": "op1",
+      "moduleNumber": -1,
+      "content": "This is not a question content",
+      "options": {}
+    },
+    {
+      "id": "M00004",
+      "difficultyParameter": 0.4,
+      "type": "MULTIPLE_CHOICE",
+      "correctAnswer": "op1",
+      "moduleNumber": -1,
+      "content": "Module -1 Which of these is the BEST estimate of (7.21*3.86)/10.09?",
+      "options": {
+        "op1": "1234",
+        "op2": "5678",
+        "op3": "91011",
+        "op4": "None of the above"
+      }
+    }
+  ]
 }
