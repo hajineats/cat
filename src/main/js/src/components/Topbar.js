@@ -4,10 +4,10 @@ const Container = styled.div`
 	background-color: #D9D9D9;
 `
 
-const TopBar = ()=>{
+const TopBar = ({children})=>{
 	return(
 		<Container>
-			Topbar
+			{children}
 		</Container>
 	)
 }

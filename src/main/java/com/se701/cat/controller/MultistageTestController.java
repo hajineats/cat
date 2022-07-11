@@ -11,17 +11,15 @@ import com.se701.cat.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 @CrossOrigin
-@Controller
+@RestController
+@RequestMapping("mst")
 public class MultistageTestController {
     private static final int NUM_OF_ITEM_PARAMETERS = 4;
     private static final int NUM_OF_MODULES = 4;
@@ -54,7 +52,7 @@ public class MultistageTestController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/multistage/{moduleId}")
+    @GetMapping("{moduleId}")
     public ResponseEntity<List<Question>> getModuleQuestions(@PathVariable Integer moduleId) {
         return ResponseEntity.ok(questionService.findAllMultistageQuestionsByModuleNumber(moduleId));
     }
@@ -63,27 +61,26 @@ public class MultistageTestController {
      * @param testResponseDTO
      * @return the number of the next module or null if the test is complete
      */
-    @PostMapping("/multistage")
-    public ResponseEntity submitResults(TestResponseDTO testResponseDTO) {
+    @PostMapping()
+    public ResponseEntity submitResults(@RequestBody TestResponseDTO testResponseDTO) {
         User user = userService.findUserById(testResponseDTO.getUserId());
         if (user == null) {
             return ResponseEntity.notFound().build();
         }
 
         if (user.getShouldTakes().isEmpty() || user.getShouldTakes().get(0) == TestType.FL) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.badRequest().body("User should not be taking the MST test");
         }
 
         userService.addUserResponses(true, testResponseDTO.getResponses(), user);
 
         Map<String, String> mstResponses = user.getMstTestResponses();
-        List<Question> allQuestions = questionService.findAllQuestions();
-        double abilityEstimate = calculateAbilityEstimate(mstResponses, allQuestions);
+        List<Question> allMultistageQuestions = questionService.findAllMultistageQuestions();
+        double abilityEstimate = calculateAbilityEstimate(mstResponses, allMultistageQuestions);
         user.setMstScore(abilityEstimate);
 
         boolean finished = user.getCurrentModule() != User.DEFAULT_STAGE;
         if (!finished) {
-            List<Question> allMultistageQuestions = questionService.findAllMultistageQuestions();
             int nextModule = calculateNextModule(abilityEstimate, mstResponses, allMultistageQuestions);
             user.setCurrentModule(nextModule);
         } else {
@@ -97,6 +94,7 @@ public class MultistageTestController {
     private double calculateAbilityEstimate(Map<String, String> mstResponses, List<Question> questionBank) {
         double[][] itemBank = initialise1PLItemBank(mstResponses.size());
         double[] responses = new double[mstResponses.size()];
+
         int index = 0;
         for (String questionId : mstResponses.keySet()) {
             Question q = questionBank
@@ -105,7 +103,7 @@ public class MultistageTestController {
                     .findAny()
                     .orElseThrow();
             itemBank[index][DIFFICULTY_PARAMETER] = q.getDifficultyParameter();
-            responses[index] = q.getCorrectAnswer().equals(mstResponses.get(questionId)) ? 1 : 0;
+            responses[index] = q.getCorrectAnswer().equalsIgnoreCase(mstResponses.get(questionId)) ? 1 : 0;
             index++;
         }
 
@@ -159,7 +157,9 @@ public class MultistageTestController {
 
         caller.setRCode(code);
         caller.runAndReturnResult("nextModuleResult");
-        return caller.getParser().getAsIntArray("nextModuleResult")[0];
+        return caller
+                .getParser()
+                .getAsIntArray("nextModuleResult")[0] - 1; // Convert from 1-indexed back to 0-indexed
     }
 
     private double[][] initialise1PLItemBank(int itemCount) {

@@ -8,21 +8,22 @@ import java.util.List;
 
 @Document("questions")
 public class Question {
+    public static final int FIXED_LENGTH_MODULE_NUMBER = -1;
     @Id
     private String id;
     private double difficultyParameter;
-    private String type;
+    private QuestionType type;
     private String content;
     /**
      * MST module number this question belongs to
-     * If the question does not belong to MST module, moduleNumber is null
+     * If the question does not belong to MST module, moduleNumber is -1
      */
-    private Integer moduleNumber;
-    private List<Option> questionOptions = new ArrayList<>();
+    private int moduleNumber;
+    private List<Option> questionOptions;
 
     private String correctAnswer;
 
-    public Question(String id, double difficultyParameter, String type, String content, Integer moduleNumber, List<Option> questionOptions, String correctAnswer) {
+    public Question(String id, double difficultyParameter, QuestionType type, String content, int moduleNumber, List<Option> questionOptions, String correctAnswer) {
         this.id = id;
         this.difficultyParameter = difficultyParameter;
         this.type = type;
@@ -32,7 +33,7 @@ public class Question {
         this.correctAnswer = correctAnswer;
     }
 
-    public Integer getModuleNumber() {
+    public int getModuleNumber() {
         return moduleNumber;
     }
 
@@ -48,7 +49,7 @@ public class Question {
         return difficultyParameter;
     }
 
-    public String getType() {
+    public QuestionType getType() {
         return type;
     }
 

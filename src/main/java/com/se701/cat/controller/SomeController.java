@@ -2,22 +2,12 @@ package com.se701.cat.controller;
 
 import com.github.rcaller.rstuff.RCaller;
 import com.github.rcaller.rstuff.RCode;
-import com.mongodb.MongoClientSettings;
-import com.mongodb.MongoDriverInformation;
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.internal.MongoClientImpl;
 import com.se701.cat.dto.QuestionDTO;
-import com.se701.cat.entity.User;
-import com.se701.cat.respository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @CrossOrigin

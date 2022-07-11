@@ -1,5 +1,11 @@
 import React, {useEffect, useState} from "react";
-import {getFLQuestionSet, getMSTModuleByModuleNumber, getUserDocument, submitFLResult} from "../services";
+import {
+	getFLQuestionSet,
+	getMSTModuleByModuleNumber,
+	getUserDocument,
+	submitFLResult,
+	submitMSTResult
+} from "../services";
 import {useNavigate} from "react-router-dom";
 
 const AppContext = React.createContext([])
@@ -60,7 +66,6 @@ const AppContextProvider = ({children}) => {
 		setCurrentQuestion(questions[0])
 		showTestScreen()
 	}
-
 
 	/**
 	 * You call this function when you are on the TestScreen and you want to go onto the instruction screen.
@@ -170,6 +175,6 @@ const AppContextProvider = ({children}) => {
 
 
 export {
-    AppContext,
-    AppContextProvider
+	AppContext,
+	AppContextProvider
 }

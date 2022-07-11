@@ -8,11 +8,11 @@ const Container = styled.div`
   overflow-y: scroll;
 `
 const Sidebar = ()=>{
-	const {currentQuestions} = useContext(AppContext)
+	const {questionList} = useContext(AppContext)
 
 	return (
 		<Container>
-			{currentQuestions.map((e)=><SidebarItem
+			{questionList.map((e)=><SidebarItem
 				key={e.id}
 				question={e} />)}
 		</Container>

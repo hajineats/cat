@@ -3,6 +3,7 @@ import BottomBar from "../components/BottomBar";
 import TopBar from "../components/Topbar";
 import {useContext} from "react";
 import {AppContext} from "../contexts/AppContext";
+import {useLocation} from "react-router-dom";
 
 const Container = styled.div`
   height: 100vh;
@@ -27,14 +28,16 @@ const ConfirmInput = styled.button`
 `
 
 const InstructionScreen = () => {
-    const {beginTest, instructions} = useContext(AppContext)
+    const {beginTest} = useContext(AppContext)
+
+    const {state} = useLocation()
 
     return (
         <Container>
             <TopBar/>
             <Content>
                 <Instructions>
-                    {instructions}
+                    {state.msg}
                 </Instructions>
             </Content>
 
