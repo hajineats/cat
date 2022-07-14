@@ -5,7 +5,7 @@ import {AppContext} from "../../contexts/AppContext";
 
 const Container = styled.div`
   background-color: #61dafb;
-  overflow-y: scroll;
+  overflow-y: auto;
 `
 const Sidebar = ()=>{
 	const {questionList} = useContext(AppContext)

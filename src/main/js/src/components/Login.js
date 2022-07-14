@@ -16,9 +16,11 @@ const Container = styled.div`
 `
 
 const Header = styled.div`
-  background-color: grey;
+  //background-color: grey;
   height: 70px;
   width: 200px;
+  font-size: 48px;
+  text-align: center;
 `
 
 const Form = styled.form`
@@ -45,14 +47,16 @@ const Login = () => {
 
     return (
         <Container>
-            <Header></Header>
+            <Header>Enter ID:</Header>
             <Form>
                 <TextInput type="text" onChange={(e)=>{
                     setUserInput(e.target.value)
                 }} />
                 <SubmitInput onClick={(e)=>{
                     e.preventDefault()
-                    handleLogin(userInput)}}/>
+                    handleLogin(userInput)}}>
+                    Login
+                </SubmitInput>
             </Form>
         </Container>
     )

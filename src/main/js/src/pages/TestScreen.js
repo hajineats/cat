@@ -7,34 +7,31 @@ import {AppContext} from "../contexts/AppContext";
 
 
 const Container = styled.div`
-  	height: 100vh;
-	display: grid;
-  	grid-template-rows: 70px 1fr 70px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
 `
 const Button = styled.button`
-	height: 60px;
-  	width: 180px;
-  background-color: firebrick;
+  height: 32px;
+  width: 124px;
+  font-size: 16px;
+  cursor: pointer;
 `
 
-const TestScreen = ()=>{
+const TestScreen = () => {
+    const {handleTestSubmission} = useContext(AppContext)
 
-	const SubmitButton = ()=>{
-		const {handleTestSubmission} = useContext(AppContext)
-		return(
-			<Button onClick={()=>{handleTestSubmission()}} />
-		)
-	}
-
-	return(
-		<Container>
-			<TopBar>
-				<SubmitButton />
-			</TopBar>
-			<TestContent>hello</TestContent>
-			<BottomBar />
-		</Container>
-	)
+    return (
+        <Container>
+            <TopBar></TopBar>
+            <TestContent>hello</TestContent>
+            <BottomBar>
+                <Button onClick={() => handleTestSubmission()}>
+                    Submit Test
+                </Button>
+            </BottomBar>
+        </Container>
+    )
 }
 
 export default TestScreen
