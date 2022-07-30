@@ -5,126 +5,195 @@
       "difficultyParameter": 0.21,
       "type": "MULTIPLE_CHOICE",
       "moduleNumber": -1,
-      "content": {
-        "image": "",
-        "text": "A workman cut off 1/5 of a pipe. The piece he cut off was 3 meters long.\nHow many meters long was the original pipe?"
-      },
+      "image": "",
+      "text": "A workman cut off 1/5 of a pipe. The piece he cut off was 3 meters long.\nHow many meters long was the original pipe?",
       "correctAnswer": "op3",
-      "options": {
-        "op1": {
+      "options": [
+        {
+          "id": "op1",
           "image": "",
           "text": "8m"
         },
-        "op2": {
+        {
+          "id": "op2",
           "image": "",
           "text": "12m"
         },
-        "op3": {
+        {
+          "id": "op3",
           "image": "",
           "text": "15m"
         },
-        "op4": {
+        {
+          "id": "op4",
           "image": "",
           "text": "18m"
         }
-      }
+      ]
     },
     {
       "id": "M052231",
       "difficultyParameter": 0.3,
       "type": "SHORT_ANSWER",
       "moduleNumber": -1,
-      "content": "42.65 + 5.748 = ? \nEnter your answer as a single number (no commas or spaces)",
+      "image": "",
+      "text": "42.65 + 5.748 = ? \nEnter your answer as a single number (no commas or spaces)",
       "correctAnswer": "48.398",
-      "options": {}
+      "options": []
     },
     {
       "id": "M032166",
       "difficultyParameter": 0.44,
       "type": "MULTIPLE_CHOICE",
       "moduleNumber": -1,
-      "content": "Which of these is the BEST estimate of 7.21×3.86/10.09",
+      "image": "",
+      "text": "Which of these is the BEST estimate of 7.21×3.86/10.09",
       "correctAnswer": "op2",
-      "options": {
-        "op1": "7×3/10",
-        "op2": "7×4/10",
-        "op3": "7×3/11",
-        "op4": "7×4/11"
-      }
+      "options": [
+        {
+          "id": "op1",
+          "image": "",
+          "text": "7×3/10"
+        },
+        {
+          "id": "op2",
+          "image": "",
+          "text": "7×4/10"
+        },
+        {
+          "id": "op3",
+          "image": "",
+          "text": "7×3/11"
+        },
+        {
+          "id": "op4",
+          "image": "",
+          "text": "7×4/11"
+        }
+      ]
     },
     {
       "id": "M052216",
       "difficultyParameter": 0.44,
       "type": "MULTIPLE_CHOICE",
       "moduleNumber": -1,
-      "content": "Which number is equal to 3/5?",
+      "image": "",
+      "text": "Which number is equal to 3/5?",
       "correctAnswer": "op2",
-      "options": {
-        "op1": "0.8",
-        "op2": "0.6",
-        "op3": "0.53",
-        "op4": "0.35"
-      }
+      "options": [
+        {
+          "id": "op1",
+          "image": "",
+          "text": "0.8"
+        },
+        {
+          "id": "op2",
+          "image": "",
+          "text": "0.6"
+        },
+        {
+          "id": "op3",
+          "image": "",
+          "text": "0.53"
+        },
+        {
+          "id": "op4",
+          "image": "",
+          "text": "0.35"
+        }
+      ]
     },
     {
       "id": "M042186",
       "difficultyParameter": 0.5,
       "type": "SHORT_ANSWER",
       "moduleNumber": -1,
-      "content": "Here is a pattern:\n3 – 3 = 0\n3 – 2 = 1\n3 – 1 = 2\n3 – 0 = 3\nWhat will the next line in the pattern be?\nEnter your answer in the form: a+b=c",
+      "image": "",
+      "text": "Here is a pattern:\n3 – 3 = 0\n3 – 2 = 1\n3 – 1 = 2\n3 – 0 = 3\nWhat will the next line in the pattern be?\nEnter your answer in the form: a+b=c",
       "correctAnswer": "3+1=4",
-      "options": {}
+      "options": []
     },
     {
       "id": "M032626",
       "difficultyParameter": 0.57,
       "type": "MULTIPLE_CHOICE",
       "moduleNumber": -1,
-      "content": "Which of these shows how 36 can be expressed as a product of prime factors?",
+      "image": "",
+      "text": "Which of these shows how 36 can be expressed as a product of prime factors?",
       "correctAnswer": "op4",
-      "options": {
-        "op1": "6 × 6",
-        "op2": "4 × 9",
-        "op3": "4 × 3 × 3",
-        "op4": "2 × 2 × 3 × 3"
-      }
+      "options": [
+        {
+          "id": "op1",
+          "image": "",
+          "text": "6 × 6"
+        },
+        {
+          "id": "op2",
+          "image": "",
+          "text": "4 × 9"
+        },
+        {
+          "id": "op3",
+          "image": "",
+          "text": "4 × 3 × 3"
+        },
+        {
+          "id": "op4",
+          "image": "",
+          "text": "2 × 2 × 3 × 3"
+        }
+      ]
     },
     {
       "id": "M042031",
       "difficultyParameter": 0.59,
       "type": "MULTIPLE_CHOICE",
       "moduleNumber": -1,
-      "content": "The fractions 4/14 and x/21 are equivalent.\nWhat is the value of x?",
+      "image": "",
+      "text": "The fractions 4/14 and x/21 are equivalent.\nWhat is the value of x?",
       "correctAnswer": "op1",
-      "options": {
-        "op1": "6",
-        "op2": "7",
-        "op3": "11",
-        "op4": "14"
-      }
+      "options": [
+        {
+          "id": "op1",
+          "image": "",
+          "text": "6"
+        },
+        {
+          "id": "op2",
+          "image": "",
+          "text": "7"
+        },
+        {
+          "id": "op3",
+          "image": "",
+          "text": "11"
+        },
+        {
+          "id": "op4",
+          "image": "",
+          "text": "14"
+        }
+      ]
     },
     {
       "id": "M032064",
       "difficultyParameter": 0.72,
       "type": "SHORT_ANSWER",
       "moduleNumber": -1,
-      "content": "Ann and Jenny divide 560 zeds between them. If Jenny gets 3/8 of the money,\nhow many zeds will Ann get?\nEnter your answer as a single number (no commas or spaces)",
+      "image": "",
+      "text": "Ann and Jenny divide 560 zeds between them. If Jenny gets 3/8 of the money,\nhow many zeds will Ann get?\nEnter your answer as a single number (no commas or spaces)",
       "correctAnswer": "350",
-      "options": {}
+      "options": []
     },
     {
       "id": "M032662",
       "difficultyParameter": 0.81,
       "type": "MULTIPLE_CHOICE",
       "moduleNumber": -1,
-      "content": "P and Q represent two fractions on the number line above.\nP × Q = N.\nWhich of these shows the location of N on the number line?",
+      "image": "",
+      "text": "P and Q represent two fractions on the number line above.\nP × Q = N.\nWhich of these shows the location of N on the number line?",
       "correctAnswer": "",
-      "options": {
-        "op1": "",
-        "op2": "",
-        "op3": "",
-        "op4": ""
-      }
+      "options": []
     }
   ]
 }
