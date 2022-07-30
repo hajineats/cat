@@ -3,7 +3,6 @@ package com.se701.cat.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Document("questions")
@@ -13,21 +12,27 @@ public class Question {
     private String id;
     private double difficultyParameter;
     private QuestionType type;
-    private String content;
+
+    private String imageContent;
+
+    private String textContent;
+
+
     /**
      * MST module number this question belongs to
      * If the question does not belong to MST module, moduleNumber is -1
      */
     private int moduleNumber;
-    private List<Option> questionOptions;
+    private List<QuestionOption> questionOptions;
 
     private String correctAnswer;
 
-    public Question(String id, double difficultyParameter, QuestionType type, String content, int moduleNumber, List<Option> questionOptions, String correctAnswer) {
+    public Question(String id, double difficultyParameter, QuestionType type, String imageContent, String textContent, int moduleNumber, List<QuestionOption> questionOptions, String correctAnswer) {
         this.id = id;
         this.difficultyParameter = difficultyParameter;
         this.type = type;
-        this.content = content;
+        this.imageContent = imageContent;
+        this.textContent = textContent;
         this.moduleNumber = moduleNumber;
         this.questionOptions = questionOptions;
         this.correctAnswer = correctAnswer;
@@ -37,7 +42,7 @@ public class Question {
         return moduleNumber;
     }
 
-    public List<Option> getQuestionOptions() {
+    public List<QuestionOption> getQuestionOptions() {
         return questionOptions;
     }
 
@@ -53,8 +58,12 @@ public class Question {
         return type;
     }
 
-    public String getContent() {
-        return content;
+    public String getImageContent() {
+        return imageContent;
+    }
+
+    public String getTextContent() {
+        return textContent;
     }
 
     public String getCorrectAnswer() {
@@ -64,23 +73,4 @@ public class Question {
     public void setCorrectAnswer(String correctAnswer) {
         this.correctAnswer = correctAnswer;
     }
-
-    public static class Option{
-        private String optionId;
-        private String optionString;
-
-        public Option(String optionId, String optionString) {
-            this.optionId = optionId;
-            this.optionString = optionString;
-        }
-
-        public String getOptionId() {
-            return optionId;
-        }
-
-        public String getOptionString() {
-            return optionString;
-        }
-    }
-
 }

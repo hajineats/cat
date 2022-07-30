@@ -5,13 +5,28 @@
       "difficultyParameter": 0.21,
       "type": "MULTIPLE_CHOICE",
       "moduleNumber": -1,
-      "content": "A workman cut off 1/5 of a pipe. The piece he cut off was 3 meters long.\nHow many meters long was the original pipe?",
+      "content": {
+        "image": "",
+        "text": "A workman cut off 1/5 of a pipe. The piece he cut off was 3 meters long.\nHow many meters long was the original pipe?"
+      },
       "correctAnswer": "op3",
       "options": {
-        "op1": "8m",
-        "op2": "12m",
-        "op3": "15m",
-        "op4": "18m"
+        "op1": {
+          "image": "",
+          "text": "8m"
+        },
+        "op2": {
+          "image": "",
+          "text": "12m"
+        },
+        "op3": {
+          "image": "",
+          "text": "15m"
+        },
+        "op4": {
+          "image": "",
+          "text": "18m"
+        }
       }
     },
     {

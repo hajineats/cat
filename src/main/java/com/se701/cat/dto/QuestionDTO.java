@@ -1,6 +1,7 @@
 package com.se701.cat.dto;
 
 import com.se701.cat.entity.Question;
+import com.se701.cat.entity.QuestionOption;
 import com.se701.cat.entity.QuestionType;
 
 import java.util.ArrayList;
@@ -9,77 +10,28 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class QuestionDTO{
-    private String id;
-    private double difficultyParameter;
-    private QuestionType type;
-    private int moduleNumber;
-    private String content;
-    private Map<String, String> options;
-    private String correctAnswer;
+    public String id;
 
-    public String getId() {
-        return id;
-    }
+    public double difficultyParameter;
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    public QuestionType type;
 
-    public double getDifficultyParameter() {
-        return difficultyParameter;
-    }
+    public int moduleNumber;
 
-    public void setDifficultyParameter(double difficultyParameter) {
-        this.difficultyParameter = difficultyParameter;
-    }
+    public String image;
 
-    public QuestionType getType() {
-        return type;
-    }
+    public String text;
 
-    public void setType(QuestionType type) {
-        this.type = type;
-    }
+    public List<Map<String,String>> options;
 
-    public int getModuleNumber() {
-        return moduleNumber;
-    }
-
-    public void setModuleNumber(int moduleNumber) {
-        this.moduleNumber = moduleNumber;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public Map<String, String> getOptions() {
-        return options;
-    }
-
-    public void setOptions(Map<String, String> options) {
-        this.options = options;
-    }
-
-    public String getCorrectAnswer() {
-        return correctAnswer;
-    }
-
-    public void setCorrectAnswer(String correctAnswer) {
-        this.correctAnswer = correctAnswer;
-    }
+    public String correctAnswer;
 
     public Question toDomainObject() {
-        List<Question.Option> optionList = options
-                .entrySet()
+        List<QuestionOption> optionList = options
                 .stream()
-                .map(e -> new Question.Option(e.getKey(), e.getValue()))
+                .map(e -> new QuestionOption(e.get("id"), e.get("image"), e.get("text")))
                 .collect(Collectors.toList());
-        return new Question(id, difficultyParameter, type, content, moduleNumber, optionList, correctAnswer);
+        return new Question(id, difficultyParameter, type, image, text, moduleNumber, optionList, correctAnswer);
     }
 
     @Override
@@ -89,7 +41,7 @@ public class QuestionDTO{
                 ", difficultyParameter=" + difficultyParameter +
                 ", type='" + type + '\'' +
                 ", moduleNumber=" + moduleNumber +
-                ", content='" + content + '\'' +
+                ", content='" + text + '\'' +
                 ", options=" + options +
                 '}';
     }
