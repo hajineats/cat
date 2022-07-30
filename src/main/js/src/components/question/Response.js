@@ -9,7 +9,7 @@ const Container = styled.div`
     background-color: #fc8585;
   `}
 `
-export const Response = ({optionId, optionString}) => {
+export const Response = ({optionId, optionText, optionImage}) => {
 	const {addUserResponse, currentResponse} = useContext(AppContext)
 	return (
 		<Container
@@ -17,7 +17,10 @@ export const Response = ({optionId, optionString}) => {
 			onClick={()=>{
 				addUserResponse(optionId)
 			}}
-		>{optionString}</Container>
+		>
+			<img src={`\/images\/${optionImage}`}/>
+			{optionText}
+		</Container>
 	)
 
 }

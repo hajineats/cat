@@ -11,9 +11,11 @@ const Header = styled.div`
   margin-bottom: 10px;
 `
 const Content = styled.div`
-  background-color: grey;
+  //background-color: grey;
   width: 100%;
-  height: 200px;
+`
+const Image = styled.img`
+	max-width: 100%;
 `
 export const QuestionArea = () => {
 	const {currentQuestion} = useContext(AppContext)
@@ -24,7 +26,8 @@ export const QuestionArea = () => {
 				{currentQuestion.id}
 			</Header>
 			<Content>
-				{currentQuestion.content}
+				<Image src={`\/images\/${currentQuestion.imageContent}`}/>
+				{currentQuestion.textContent}
 			</Content>
 		</Container>
 	)

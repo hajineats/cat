@@ -19,7 +19,8 @@ export const ResponseArea = () => {
 				.map(e => <Response
 					key={e.optionId}
 					optionId={e.optionId}
-					optionString={e.optionString}
+					optionText={e.optionText}
+					optionImage={e.optionImage}
 				/>) : <TextResponse/>}
 		</Container>
 	)
