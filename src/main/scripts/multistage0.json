@@ -1,0 +1,299 @@
+[
+    {
+        "id": "M042032",
+        "difficultyParameter": 0.42,
+        "type": "MULTIPLE_CHOICE",
+        "imageContent": "",
+        "textContent": "Which fraction is equivalent to 0.125",
+        "moduleNumber": 0,
+        "questionOptions": [
+            {
+                "optionId": "op1",
+                "optionImage": "",
+                "optionText": "125/100"
+            },
+            {
+                "optionId": "op2",
+                "optionImage": "",
+                "optionText": "125/1,000"
+            },
+            {
+                "optionId": "op3",
+                "optionImage": "",
+                "optionText": "125/10,000"
+            },
+            {
+                "optionId": "op4",
+                "optionImage": "",
+                "optionText": "125/100,000"
+            }
+        ],
+        "correctAnswer": "op2"
+    },
+    {
+        "id": "M032094",
+        "difficultyParameter": 0.49,
+        "type": "MULTIPLE_CHOICE",
+        "imageContent": "",
+        "textContent": "4/100 + 3/1000 =",
+        "moduleNumber": 0,
+        "questionOptions": [
+            {
+                "optionId": "op1",
+                "optionImage": "",
+                "optionText": "0.043"
+            },
+            {
+                "optionId": "op2",
+                "optionImage": "",
+                "optionText": "0.1043"
+            },
+            {
+                "optionId": "op3",
+                "optionImage": "",
+                "optionText": "0.403"
+            },
+            {
+                "optionId": "op4",
+                "optionImage": "",
+                "optionText": "0.43"
+            }
+        ],
+        "correctAnswer": "op1"
+    },
+    {
+        "id": "M052061",
+        "difficultyParameter": 0.54,
+        "type": "SHORT_ANSWER",
+        "imageContent": "",
+        "textContent": "Kim is packing eggs into boxes.\n Each box holds 6 eggs.\n She has 94 eggs.\n What is the smallest number of boxes she needs to pack all the eggs?",
+        "moduleNumber": 0,
+        "correctAnswer": "16"
+    }, 
+    {
+        "id": "M032757",
+        "difficultyParameter": 0.42,
+        "type": "MULTIPLE_CHOICE",
+        "imageContent": "M032757_question",
+        "textContent": "What will be the value of A,B,C,D in the table?",
+        "moduleNumber": 0,
+        "questionOptions": [
+            {
+                "optionId": "op1",
+                "optionImage": "",
+                "optionText": "A=20, B=24, C=36, D=49"
+            },
+            {
+                "optionId": "op2",
+                "optionImage": "",
+                "optionText": "A=25, B=24, C=30, D=49"
+            },
+            {
+                "optionId": "op3",
+                "optionImage": "",
+                "optionText": "A=20, B=24, C=34, D=64"
+            },
+            {
+                "optionId": "op4",
+                "optionImage": "",
+                "optionText": "A=25, B=26, C=36, D=64"
+            }
+        ],
+        "correctAnswer": "op1"
+    },
+    {
+        "id": "M042236",
+        "difficultyParameter":0.44,
+        "type": "MULTIPLE_CHOICE",
+        "imageContent": "",
+        "textContent": "Which of these is equal to 3p^2 + 2p + 2p^2 + p? Note that p^2 = p*p.",
+        "moduleNumber": 0,
+        "questionOptions": [
+            {
+                "optionId": "op1",
+                "optionImage": "",
+                "optionText": "8p"
+            },
+            {
+                "optionId": "op2",
+                "optionImage": "",
+                "optionText": "8p^2"
+            },
+            {
+                "optionId": "op3",
+                "optionImage": "",
+                "optionText": "5p^2+3p"
+            },
+            {
+                "optionId": "op4",
+                "optionImage": "",
+                "optionText": "7p^2+p"
+            }
+        ],
+        "correctAnswer": "op3"
+    },
+    {
+        "id": "M042077",
+        "difficultyParameter":0.61,
+        "type": "MULTIPLE_CHOICE",
+        "imageContent": "",
+        "textContent": "Which expression is equivalent to 4(3 + x)?",
+        "moduleNumber": 0,
+        "questionOptions": [
+            {
+                "optionId": "op1",
+                "optionImage": "",
+                "optionText": "12+x"
+            },
+            {
+                "optionId": "op2",
+                "optionImage": "",
+                "optionText": "7+x"
+            },
+            {
+                "optionId": "op3",
+                "optionImage": "",
+                "optionText": "12+4x"
+            },
+            {
+                "optionId": "op4",
+                "optionImage": "",
+                "optionText": "12x"
+            }
+        ],
+        "correctAnswer": "op3"
+    },
+    {
+        "id": "M042152",
+        "difficultyParameter":0.37,
+        "type": "MULTIPLE_CHOICE",
+        "imageContent": "M042152_question.png",
+        "textContent": "",
+        "moduleNumber": 0,
+        "questionOptions": [
+            {
+                "optionId": "op1",
+                "optionImage": "M042152_op1",
+                "optionText": ""
+            },
+            {
+                "optionId": "op2",
+                "optionImage": "M042152_op2",
+                "optionText": ""
+            },
+            {
+                "optionId": "op3",
+                "optionImage": "M042152_op3",
+                "optionText": ""
+            },
+            {
+                "optionId": "op4",
+                "optionImage": "M042152_op4",
+                "optionText": ""
+            }
+        ],
+        "correctAnswer": "op4"
+    },
+    {
+        "id": "M042201",
+        "difficultyParameter": 0.52,
+        "type": "SHORT_ANSWER",
+        "imageContent": "M042201_question.png",
+        "textContent": "The volume of the rectangular box is 200 cm3. What is the value of x?",
+        "moduleNumber": 0,
+        "correctAnswer": "10"
+    }, 
+    {
+        "id": "M052084",
+        "difficultyParameter":0.55,
+        "type": "MULTIPLE_CHOICE",
+        "imageContent": "",
+        "textContent": "The perimeter of a square is 36 cm.\n What is the area of this square?",
+        "moduleNumber": 0,
+        "questionOptions": [
+            {
+                "optionId": "op1",
+                "optionImage": "",
+                "optionText": "81 cm^2"
+            },
+            {
+                "optionId": "op2",
+                "optionImage": "",
+                "optionText": "36 cm^2"
+            },
+            {
+                "optionId": "op3",
+                "optionImage": "",
+                "optionText": "24 cm^2"
+            },
+            {
+                "optionId": "op4",
+                "optionImage": "",
+                "optionText": "18 cm^2"
+            }
+        ],
+        "correctAnswer": "op1"
+    },
+    {
+        "id": "M042269",
+        "difficultyParameter":0.31,
+        "type": "MULTIPLE_CHOICE",
+        "imageContent": "M042269_question.png",
+        "textContent": "",
+        "moduleNumber": 0,
+        "questionOptions": [
+            {
+                "optionId": "op1",
+                "optionImage": "",
+                "optionText": "Each student in team B jumped farther than any student in team A."
+            },
+            {
+                "optionId": "op2",
+                "optionImage": "",
+                "optionText": "After every student in team A jumped, there was a student in team B who jumped farther."
+            },
+            {
+                "optionId": "op3",
+                "optionImage": "",
+                "optionText": "As a group, team B jumped farther than team A."
+            },
+            {
+                "optionId": "op4",
+                "optionImage": "",
+                "optionText": "Some students in team A jumped farther than some students in team B."
+            }
+        ],
+        "correctAnswer": "op3"
+    },
+    {
+        "id": "M032681C",
+        "difficultyParameter":0.39,
+        "type": "MULTIPLE_CHOICE",
+        "imageContent": "M032681C_question.png",
+        "textContent": "",
+        "moduleNumber": 0,
+        "questionOptions": [
+            {
+                "optionId": "op1",
+                "optionImage": "",
+                "optionText": "A=1pm, B=2pm"
+            },
+            {
+                "optionId": "op2",
+                "optionImage": "",
+                "optionText": "A=3pm, B=4pm"
+            },
+            {
+                "optionId": "op3",
+                "optionImage": "",
+                "optionText": "A=11am, B=12 noon"
+            },
+            {
+                "optionId": "op4",
+                "optionImage": "",
+                "optionText": "A=8am, B=9am"
+            }
+        ],
+        "correctAnswer": "op1"
+    }
+]
