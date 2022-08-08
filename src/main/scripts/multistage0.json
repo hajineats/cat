@@ -295,5 +295,36 @@
             }
         ],
         "correctAnswer": "op1"
+    },
+    {
+        "id": "M042207",
+        "difficultyParameter": 0.41,
+        "type": "MULTIPLE_CHOICE",
+        "imageContent": "M042207_question.PNG",
+        "textContent": "Pick the pie chart with proportions that match the information in the table.",
+        "moduleNumber": 0,
+        "questionOptions": [
+            {
+                "optionId": "op1",
+                "optionImage": "M042207_op1.PNG",
+                "optionText": ""
+            },
+            {
+                "optionId": "op2",
+                "optionImage": "M042207_op2.PNG",
+                "optionText": ""
+            },
+            {
+                "optionId": "op3",
+                "optionImage": "M042207_op3.PNG",
+                "optionText": ""
+            },
+            {
+                "optionId": "op4",
+                "optionImage": "",
+                "optionText": "None of the above"
+            }
+        ],
+        "correctAnswer": "op2"
     }
 ]

@@ -264,5 +264,45 @@
       }
     ],
     "correctAnswer": "op1"
+  },
+  {
+    "id": "M032760C",
+    "difficultyParameter": 0.83,
+    "type": "SHORT_ANSWER",
+    "imageContent": "M032760C_question.png",
+    "textContent": "Pat made a shape using 44 of the red tiles. How many black tiles would Pat need to complete the black part of the shape?\n",
+    "moduleNumber": 3,
+    "correctAnswer": "100"
+  },
+  {
+    "id": "M052503B",
+    "difficultyParameter": 0.83,
+    "type": "MULTIPLE_CHOICE",
+    "imageContent": "M052503B_question.png",
+    "textContent": "Why could Country Y expect to have a bigger problem taking care of its elderly population than Country X?",
+    "moduleNumber": 3,
+    "questionOptions": [
+      {
+        "optionId": "op1",
+        "optionImage": "",
+        "optionText": "Because there are more older people than younger people."
+      },
+      {
+        "optionId": "op2",
+        "optionImage": "",
+        "optionText": "Because there are more younger people than older people."
+      },
+      {
+        "optionId": "op3",
+        "optionImage": "",
+        "optionText": "Because there are more number of people having children to keep up the population."
+      },
+      {
+        "optionId": "op4",
+        "optionImage": "",
+        "optionText": "Because there are more youngsters, but less workforce"
+      }
+    ],
+    "correctAnswer": "op1"
   }
 ]

@@ -242,5 +242,36 @@
       }
     ],
     "correctAnswer": "op3"
+  },
+  {
+    "id": "M032695",
+    "difficultyParameter": 0.40,
+    "type": "MULTIPLE_CHOICE",
+    "imageContent": "M032695_question.png",
+    "textContent": "Of the 400 students in a school, 50 plan to go to university, 100 to a polytechnic school, 150 to a business college, and the remainder plan to enter workforce.\n Which of the pie charts below shows the proportions of students planning to do each of these?",
+    "moduleNumber": 2,
+    "questionOptions": [
+      {
+        "optionId": "op1",
+        "optionImage": "M032695_op1.png",
+        "optionText": ""
+      },
+      {
+        "optionId": "op2",
+        "optionImage": "M032695_op2.png",
+        "optionText": ""
+      },
+      {
+        "optionId": "op3",
+        "optionImage": "M032695_op3.png",
+        "optionText": ""
+      },
+      {
+        "optionId": "op4",
+        "optionImage": "",
+        "optionText": "none of the options"
+      }
+    ],
+    "correctAnswer": "op1"
   }
 ]

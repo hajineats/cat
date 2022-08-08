@@ -297,32 +297,32 @@
     "correctAnswer": "op4"
   },
   {
-    "id": "M042207",
-    "difficultyParameter": 0.41,
+    "id": "M032734",
+    "difficultyParameter": 0.21,
     "type": "MULTIPLE_CHOICE",
-    "imageContent": "M042207_question.PNG",
-    "textContent": "Pick the pie chart with proportions that match the information in the table.",
+    "imageContent": "M032734_question.png",
+    "textContent": "The shape shown above is cut out of cardboard. The triangle flaps are then folded up along the dotted lines until they touch the edges of the flaps next to them.\nWhich diagram shows what the shape would look like when viewed from directly above?",
     "moduleNumber": 1,
     "questionOptions": [
       {
         "optionId": "op1",
-        "optionImage": "M042207_op1.PNG",
+        "optionImage": "M032734_op1.png",
         "optionText": ""
       },
       {
         "optionId": "op2",
-        "optionImage": "M042207_op2.PNG",
+        "optionImage": "M032734_op2.png",
         "optionText": ""
       },
       {
         "optionId": "op3",
-        "optionImage": "M042207_op3.PNG",
+        "optionImage": "M032734_op3.png",
         "optionText": ""
       },
       {
         "optionId": "op4",
         "optionImage": "",
-        "optionText": "None of the above"
+        "optionText": "none of the options"
       }
     ],
     "correctAnswer": "op2"
