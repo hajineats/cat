@@ -4,11 +4,11 @@ import {AppContext} from "../../contexts/AppContext";
 
 const Container = styled.div`
 `
-const Header = styled.div`
-  background-color: grey;
-  height: 70px;
-  width: 200px;
-  margin-bottom: 10px;
+const Header = styled.h4`
+  //background-color: grey;
+  //height: 70px;
+  //width: 200px;
+  //margin-bottom: 10px;
 `
 const Content = styled.div`
   //background-color: grey;
@@ -19,14 +19,15 @@ const Image = styled.img`
 `
 export const QuestionArea = () => {
 	const {currentQuestion} = useContext(AppContext)
-
+	console.log(currentQuestion)
 	return (
 		<Container>
 			<Header>
 				{currentQuestion.id}
 			</Header>
 			<Content>
-				<Image src={`\/images\/${currentQuestion.imageContent}`}/>
+				{currentQuestion.imageContent.length != 0 && <Image src={`\/images\/${currentQuestion.imageContent}`}/>}
+				<br/>
 				{currentQuestion.textContent}
 			</Content>
 		</Container>

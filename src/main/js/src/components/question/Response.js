@@ -4,7 +4,8 @@ import {useContext} from "react";
 
 const Container = styled.div`
   background-color: darkgray;
-  height: 100px;
+  //height: 100px;
+  padding: 10px;
   ${props => props.responded && css`
     background-color: #fc8585;
   `}
@@ -18,7 +19,7 @@ export const Response = ({optionId, optionText, optionImage}) => {
 				addUserResponse(optionId)
 			}}
 		>
-			<img src={`\/images\/${optionImage}`}/>
+			{optionImage.length != 0 && <img src={`\/images\/${optionImage}`}/>}
 			{optionText}
 		</Container>
 	)

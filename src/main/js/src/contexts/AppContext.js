@@ -58,43 +58,9 @@ const AppContextProvider = ({children}) => {
 	}
 
 	const beginTest = async () => {
-		const questions = [
-			{
-				"id": "M042041",
-				"difficultyParameter": 0.21,
-				"type": "MULTIPLE_CHOICE",
-				"imageContent": "Screen_Shot_2022-07-29_at_10.18.48_PM.png",
-				"textContent": "A workman cut off 1/5 of a pipe. The piece he cut off was 3 meters long.\nHow many meters long was the original pipe?",
-				"moduleNumber": -1,
-				"questionOptions": [
-					{
-						"optionId": "op1",
-						"optionImage": "awefawf",
-						"optionText": "8m"
-					},
-					{
-						"optionId": "op2",
-						"optionImage": "zcvzxcv",
-						"optionText": "12m"
-					},
-					{
-						"optionId": "op3",
-						"optionImage": "zvsdvv",
-						"optionText": "15m"
-					},
-					{
-						"optionId": "op4",
-						"optionImage": "aweraw",
-						"optionText": "18m"
-					}
-				],
-				"correctAnswer": "op3"
-			}
-		]
-
-		// const questions = userDocument.shouldTakes[0] === "FL" ?
-		// 	await getFLQuestionSet() :
-		// 	await getMSTModuleByModuleNumber(userDocument.currentModule);
+		const questions = userDocument.shouldTakes[0] === "FL" ?
+			await getFLQuestionSet() :
+			await getMSTModuleByModuleNumber(userDocument.currentModule);
 
 		setQuestionList(questions)
 		setCurrentQuestion(questions[0])
