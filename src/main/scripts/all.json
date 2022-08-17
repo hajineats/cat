@@ -874,22 +874,22 @@
       "options": [
         {
           "id": "op1",
-          "image": "M042152_op1",
+          "image": "M042152_op1.png",
           "text": ""
         },
         {
           "id": "op2",
-          "image": "M042152_op2",
+          "image": "M042152_op2.png",
           "text": ""
         },
         {
           "id": "op3",
-          "image": "M042152_op3",
+          "image": "M042152_op3.png",
           "text": ""
         },
         {
           "id": "op4",
-          "image": "M042152_op4",
+          "image": "M042152_op4.png",
           "text": ""
         }
       ],
@@ -1301,8 +1301,8 @@
       "id": "M042179",
       "difficultyParameter": 0.34,
       "type": "MULTIPLE_CHOICE",
-      "image": "M042179_question.png",
-      "text": "",
+      "image": "",
+      "text": "There are 10 red, 8 blue, and 4 white buttons in a bag. What is the chance of taking out either a blue button or a white button?",
       "moduleNumber": 1,
       "options": [
         {
