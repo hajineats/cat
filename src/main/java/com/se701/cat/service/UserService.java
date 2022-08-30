@@ -1,13 +1,9 @@
 package com.se701.cat.service;
 
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoDatabase;
-import com.se701.cat.MongoConfig;
 import com.se701.cat.entity.TestType;
 import com.se701.cat.entity.User;
 import com.se701.cat.respository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,9 +14,6 @@ import java.util.Optional;
 public class UserService {
     @Autowired
     UserRepository repository;
-
-    @Autowired
-    MongoConfig mongoConfig;
 
     /**
      * Creates a user
