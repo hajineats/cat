@@ -190,28 +190,28 @@
       "difficultyParameter": 0.81,
       "type": "MULTIPLE_CHOICE",
       "moduleNumber": -1,
-      "image": "M032662_image.PNG",
+      "image": "M032662_image.png",
       "text": "P and Q represent two fractions on the number line above.\nP × Q = N.\nWhich of these shows the location of N on the number line?",
       "correctAnswer": "op4",
       "options": [
         {
           "id": "op1",
-          "image": "M032662_op1.PNG",
+          "image": "M032662_op1.png",
           "text": ""
         },
         {
           "id": "op2",
-          "image": "M032662_op2.PNG",
+          "image": "M032662_op2.png",
           "text": ""
         },
         {
           "id": "op3",
-          "image": "M032662_op3.PNG",
+          "image": "M032662_op3.png",
           "text": ""
         },
         {
           "id": "op4",
-          "image": "M032662_op4.PNG",
+          "image": "M032662_op4.png",
           "text": ""
         }
       ]
@@ -221,7 +221,7 @@
       "difficultyParameter": 0.34,
       "type": "MULTIPLE_CHOICE",
       "moduleNumber": -1,
-      "image": "M032352_image.PNG",
+      "image": "M032352_image.png",
       "text": "The table above shows the shadow lengths of four bushes of different heights at 10 a.m. What is the shadow length at 10 a.m. of a bush that has a height of 50 centimeters?",
       "correctAnswer": "",
       "options": [
@@ -345,7 +345,7 @@
       "difficultyParameter": 0.58,
       "type": "SHORT_ANSWER",
       "moduleNumber": -1,
-      "image": "M042228_image.PNG",
+      "image": "M042228_image.png",
       "text": "What is the value of x in this pattern?",
       "correctAnswer": "24",
       "options": []
@@ -355,7 +355,7 @@
       "difficultyParameter": 0.68,
       "type": "SHORT_ANSWER",
       "moduleNumber": -1,
-      "image": "M032538_image.PNG",
+      "image": "M032538_image.png",
       "text": "Use the formula to find the value of y when t = 9",
       "correctAnswer": "90",
       "options": []
@@ -406,7 +406,7 @@
       "difficultyParameter": 0.92,
       "type": "SHORT_ANSWER",
       "moduleNumber": -1,
-      "image": "M032683_image.PNG",
+      "image": "M032683_image.png",
       "text": "Fully simplify the above expression into a single fraction.\n Enter your answer in the form, ax/b, where a and b are whole numbers",
       "correctAnswer": "9x/8",
       "options": []
@@ -416,7 +416,7 @@
       "difficultyParameter": 0.32,
       "type": "MULTIPLE_CHOICE",
       "moduleNumber": -1,
-      "image": "M032100_image.PNG",
+      "image": "M032100_image.png",
       "text": "The figure above shows a shape made up of cubes that are all the same size. There is a hole all the way through the shape. How many cubes would be needed to fill the hole?",
       "correctAnswer": "op4",
       "options": [
@@ -453,22 +453,22 @@
       "options": [
         {
           "id": "op1",
-          "image": "M042150_op1.PNG",
+          "image": "M042150_op1.png",
           "text": ""
         },
         {
           "id": "op2",
-          "image": "M042150_op2.PNG",
+          "image": "M042150_op2.png",
           "text": ""
         },
         {
           "id": "op3",
-          "image": "M042150_op3.PNG",
+          "image": "M042150_op3.png",
           "text": ""
         },
         {
           "id": "op4",
-          "image": "M042150_op4.PNG",
+          "image": "M042150_op4.png",
           "text": ""
         }
       ]
@@ -509,7 +509,7 @@
       "difficultyParameter": 0.6,
       "type": "SHORT_ANSWER",
       "moduleNumber": -1,
-      "image": "M052362_image.PNG",
+      "image": "M052362_image.png",
       "text": "In this triangle:\nAC = BC\nAB is twice as long as CX.\nWhat is the size of angle B (in degrees)? Enter your answer as a number (no words or symbols).",
       "correctAnswer": "45",
       "options": []
@@ -519,7 +519,7 @@
       "difficultyParameter": 0.73,
       "type": "SHORT_ANSWER",
       "moduleNumber": -1,
-      "image": "M052206_image.PNG",
+      "image": "M052206_image.png",
       "text": "Ryan is packing books into a rectangular box.\nAll the books are the same size.\nWhat is the largest number of books that will fit inside the box? Enter your answer as a number (no words or symbols).",
       "correctAnswer": "12",
       "options": []
@@ -529,7 +529,7 @@
       "difficultyParameter": 0.75,
       "type": "SHORT_ANSWER",
       "moduleNumber": -1,
-      "image": "M052408_image.PNG",
+      "image": "M052408_image.png",
       "text": "Lines m and n are parallel.\nWhat is the value of b? Enter your answer as a number (no words or symbols).",
       "correctAnswer": "50",
       "options": []
@@ -642,7 +642,7 @@
       "difficultyParameter": 0.62,
       "type": "MULTIPLE_CHOICE",
       "moduleNumber": -1,
-      "image": "M032507_image.PNG",
+      "image": "M032507_image.png",
       "text": "The spinner is for Steve’s new game. Out of 600 spins, approximately how many times should he expect the arrow to land on the red sector?",
       "correctAnswer": "op3",
       "options": [
@@ -673,7 +673,7 @@
       "difficultyParameter": 0.83,
       "type": "MULTIPLE_CHOICE",
       "moduleNumber": -1,
-      "image": "M052503A_image.PNG",
+      "image": "M052503A_image.png",
       "text": "The graphs for Country X and Country Y show the age structure of each country’s population. The population is divided into three age groups from youngest to oldest. The graphs enable predictions about population growth.\nWhy could the age structure of Country X lead to more rapid population growth than the age structure of Country Y?",
       "correctAnswer": "op2",
       "options": [
@@ -1002,23 +1002,23 @@
       "id": "M042207",
       "difficultyParameter": 0.41,
       "type": "MULTIPLE_CHOICE",
-      "image": "M042207_question.PNG",
+      "image": "M042207_question.png",
       "text": "Pick the pie chart with proportions that match the information in the table.",
       "moduleNumber": 0,
       "options": [
         {
           "id": "op1",
-          "image": "M042207_op1.PNG",
+          "image": "M042207_op1.png",
           "text": ""
         },
         {
           "id": "op2",
-          "image": "M042207_op2.PNG",
+          "image": "M042207_op2.png",
           "text": ""
         },
         {
           "id": "op3",
-          "image": "M042207_op3.PNG",
+          "image": "M042207_op3.png",
           "text": ""
         },
         {
@@ -1585,17 +1585,17 @@
       "options": [
         {
           "id": "op1",
-          "image": "M042270_op1.PNG",
+          "image": "M042270_op1.png",
           "text": ""
         },
         {
           "id": "op2",
-          "image": "M042270_op2.PNG",
+          "image": "M042270_op2.png",
           "text": ""
         },
         {
           "id": "op3",
-          "image": "M042270_op3.PNG",
+          "image": "M042270_op3.png",
           "text": ""
         },
         {
@@ -1869,7 +1869,7 @@
       "difficultyParameter": 0.89,
       "type": "SHORT_ANSWER",
       "options": [],
-      "image": "M032692_question.PNG",
+      "image": "M032692_question.png",
       "text": "Enter your answer as a number e.g. 180",
       "moduleNumber": 3,
       "correctAnswer": "540"
