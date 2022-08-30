@@ -42,11 +42,17 @@ const AppContextProvider = ({children}) => {
 	}
 
 	const handleTestSubmission = async () => {
+		// Map unanswered questions to an incorrect answer
+		let responses = {}
+		questionList.forEach(q => {
+			responses[q.id] = userResponses.hasOwnProperty(q.id) ?  userResponses[q.id] : 'placeholder'
+		})
+
 		// submit responses
 		if (userDocument.shouldTakes[0] === "FL") {
-			await submitFLResult(userDocument.id, userResponses)
+			await submitFLResult(userDocument.id, responses)
 		} else {
-			await submitMSTResult(userDocument.id, userResponses)
+			await submitMSTResult(userDocument.id, responses)
 		}
 
 		// set user document
