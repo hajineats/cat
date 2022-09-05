@@ -23,6 +23,7 @@ const Button = styled.button`
 const TestScreen = () => {
     const {state} = useLocation()
     const {handleTestSubmission} = useContext(AppContext)
+
     return (
         <Container>
             <TopBar><Timer timeRemainingInSeconds={state.timeRemainingInSeconds} /></TopBar>

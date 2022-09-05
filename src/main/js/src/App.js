@@ -7,6 +7,7 @@ import InstructionScreen from "./pages/InstructionScreen";
 import EndScreen from "./pages/EndScreen";
 
 function App() {
+
     return (
         <BrowserRouter>
             <AppContextProvider>

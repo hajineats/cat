@@ -8,15 +8,16 @@ import {
 } from "../services";
 import {useNavigate} from "react-router-dom";
 import {useTimer} from "react-timer-hook";
+import usePersistedState from "../components/hooks/usePersistedState";
 
 const AppContext = React.createContext([])
 
 const AppContextProvider = ({children}) => {
-	const [questionList, setQuestionList] = useState([]);
-	const [userDocument, setUserDocument] = useState({});
-	const [userResponses, setUserResponses] = useState({});
-	const [currentQuestion, setCurrentQuestion] = useState(null);
-	const [currentResponse, setCurrentResponse] = useState(null);
+	const [questionList, setQuestionList] = usePersistedState("questionList",[]);
+	const [userDocument, setUserDocument] = usePersistedState("userDocument",{});
+	const [userResponses, setUserResponses] = usePersistedState("userResponses",{});
+	const [currentQuestion, setCurrentQuestion] = usePersistedState("currentQuestion",null);
+	const [currentResponse, setCurrentResponse] = usePersistedState("currentResponse",null);
 	const navigate = useNavigate()
 
 	useEffect(() => {
