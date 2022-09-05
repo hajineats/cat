@@ -7,6 +7,7 @@ import {
 	submitMSTResult
 } from "../services";
 import {useNavigate} from "react-router-dom";
+import {useTimer} from "react-timer-hook";
 
 const AppContext = React.createContext([])
 
@@ -68,9 +69,11 @@ const AppContextProvider = ({children}) => {
 			await getFLQuestionSet() :
 			await getMSTModuleByModuleNumber(userDocument.currentModule);
 
+		const timeRemainingInSeconds = userDocument.shouldTakes[0] === "FL" ? 45*60 : 15*60;
+
 		setQuestionList(questions)
 		setCurrentQuestion(questions[0])
-		showTestScreen()
+		showTestScreen(timeRemainingInSeconds)
 	}
 
 	/**
@@ -145,8 +148,8 @@ const AppContextProvider = ({children}) => {
 		}
 	}
 
-	const showTestScreen = ()=>{
-		navigate("/test")
+	const showTestScreen = (timeRemainingInSeconds)=>{
+		navigate("/test", {state: {timeRemainingInSeconds: timeRemainingInSeconds}})
 	}
 
 

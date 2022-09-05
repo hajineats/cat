@@ -4,6 +4,8 @@ import TopBar from "../components/Topbar";
 import TestContent from "../components/TestContent";
 import {useContext} from "react";
 import {AppContext} from "../contexts/AppContext";
+import Timer from "../components/widgets/TImer";
+import {useLocation} from "react-router-dom";
 
 
 const Container = styled.div`
@@ -19,11 +21,11 @@ const Button = styled.button`
 `
 
 const TestScreen = () => {
+    const {state} = useLocation()
     const {handleTestSubmission} = useContext(AppContext)
-
     return (
         <Container>
-            <TopBar></TopBar>
+            <TopBar><Timer timeRemainingInSeconds={state.timeRemainingInSeconds} /></TopBar>
             <TestContent>hello</TestContent>
             <BottomBar>
                 <Button onClick={() => handleTestSubmission()}>
