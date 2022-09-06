@@ -6,6 +6,8 @@ import {useContext} from "react";
 import {AppContext} from "../contexts/AppContext";
 import Timer from "../components/widgets/Timer";
 import {useLocation} from "react-router-dom";
+import {confirmAlert} from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 
 const Container = styled.div`
@@ -26,10 +28,22 @@ const TestScreen = () => {
 
     return (
         <Container>
-            <TopBar><Timer timeRemainingInSeconds={state.timeRemainingInSeconds} /></TopBar>
+            <TopBar><Timer timeRemainingInSeconds={state.timeRemainingInSeconds}/></TopBar>
             <TestContent>hello</TestContent>
             <BottomBar>
-                <Button onClick={() => handleTestSubmission()}>
+                <Button onClick={() => confirmAlert({
+                    title: 'Confirm Test Submission',
+                    message: 'Are you sure want to submit? You will not be able to change your answers after.',
+                    buttons: [
+                        {
+                            label: 'Yes',
+                            onClick: () => handleTestSubmission()
+                        },
+                        {
+                            label: 'Cancel',
+                        }
+                    ]
+                })}>
                     Submit Test
                 </Button>
             </BottomBar>

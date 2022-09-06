@@ -775,7 +775,7 @@
       "id": "M032757",
       "difficultyParameter": 0.42,
       "type": "MULTIPLE_CHOICE",
-      "image": "M032757_question",
+      "image": "M032757_question.png",
       "text": "What will be the value of A,B,C,D in the table?",
       "moduleNumber": 0,
       "options": [
@@ -901,7 +901,7 @@
       "type": "SHORT_ANSWER",
       "options": [],
       "image": "M042201_question.png",
-      "text": "The volume of the rectangular box is 200 cm3. What is the value of x?",
+      "text": "The volume of the rectangular box is 200 cm^3. What is the value of x?",
       "moduleNumber": 0,
       "correctAnswer": "10"
     },

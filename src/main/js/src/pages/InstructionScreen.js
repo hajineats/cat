@@ -46,7 +46,7 @@ const InstructionScreen = () => {
                     e.preventDefault();
                     beginTest();
                 }}>
-                    Confirm
+                    Begin Test
                 </ConfirmInput>
             </BottomBar>
         </Container>

@@ -139,10 +139,10 @@ const AppContextProvider = ({children}) => {
 
 		// if the user has more
 		if (userDoc.shouldTakes[0] === "FL") {
-			showInstruction(`You are taking the fixed length test. You will have 45 minutes to answer the questions.`)
+			showInstruction(`You are taking the fixed length test. You will have 45 minutes to answer 30 questions.`)
 		} else {
 			if (userDoc.currentModule === 0) {
-				showInstruction("You are taking the first module of the multistage test. There will be two modules, each taking 15 minutes for a total testing time of 30 minutes.")
+				showInstruction("You are taking the first module of the two-module multistage test. Each module has 10 questions and you will have 15 minutes to answer for each module.")
 			} else {
 				showInstruction("You are taking second module of MST. Why was this called when you came from the login screen? Did you accidentally close the window after submitting the first booklet and come back?")
 			}
