@@ -96,28 +96,28 @@ const AppContextProvider = ({children}) => {
 	const showInstructionAfterTestSubmission = (userDoc) => {
 		// has submitted all the exams it needs to for both Day 1 and 2
 		if (userDoc.shouldTakes.length === 0) {
-			endTest("You have completed all your exams for Day 1 and 2. Do not close the window, and let the supervisor know.")
+			endTest("You have completed both fixed length and multistage tests. Do not close the window, and let the supervisor know.")
 			return
 		}
 
 		// has just done first module of MST, and needs to do second module
 		if (userDoc.shouldTakes[0] === "MST" && userDoc.currentModule !== 0) {
 			// note moduleNumber = 0 is a default module that every participant takes on their first module
-			showInstruction("next up is the second part of your examination. It will be your last one.")
+			showInstruction("Next up is the second part of your multistage test. It will be your last one.")
 			return
 		}
 
 		// has just done FL, and needs to come back on the next day to start MST
 		if (userDoc.shouldTakes[0] === "MST" && userDoc.currentModule === 0) {
 			// this is reached when you have done FL test, but have one more exam to go
-			endTest("You have completed all your exams for Day 1. Do not close the window, and let the supervisor know.")
+			endTest("You have completed the fixed length test. Do not close the window, and let the supervisor know.")
 			return
 		}
 
 		// has just done MST, and needs to come back on the next day to start FL
 		if (userDoc.shouldTakes[0] === "FL"){
 			// this is reached when you have done MST test, but have one more exam (FL) to go
-			endTest("You have completed all your exams for Day 1. Do not close the window, and let the supervisor know.")
+			endTest("You have completed the multistage test. Do not close the window, and let the supervisor know.")
 			return
 		}
 
@@ -139,10 +139,10 @@ const AppContextProvider = ({children}) => {
 
 		// if the user has more
 		if (userDoc.shouldTakes[0] === "FL") {
-			showInstruction(`You are taking FL!`)
+			showInstruction(`You are taking the fixed length test. You will have 45 minutes to answer the questions.`)
 		} else {
 			if (userDoc.currentModule === 0) {
-				showInstruction("You are taking first module of MST")
+				showInstruction("You are taking the first module of the multistage test. There will be two modules, each taking 15 minutes for a total testing time of 30 minutes.")
 			} else {
 				showInstruction("You are taking second module of MST. Why was this called when you came from the login screen? Did you accidentally close the window after submitting the first booklet and come back?")
 			}

@@ -4,7 +4,7 @@ import TopBar from "../components/Topbar";
 import TestContent from "../components/TestContent";
 import {useContext} from "react";
 import {AppContext} from "../contexts/AppContext";
-import Timer from "../components/widgets/TImer";
+import Timer from "../components/widgets/Timer";
 import {useLocation} from "react-router-dom";
 
 
