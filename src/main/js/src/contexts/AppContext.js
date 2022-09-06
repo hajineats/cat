@@ -57,9 +57,12 @@ const AppContextProvider = ({children}) => {
 			await submitMSTResult(userDocument.id, responses)
 		}
 
+		window.localStorage.clear()
+
 		// set user document
 		const updatedUserDoc = await getUserDocument(userDocument.id)
 		setUserDocument(updatedUserDoc)
+
 
 		// if the user has remaining shouldTakes, it's either the student needs to do second part of MST or has to come back on day 2
 		showInstructionAfterTestSubmission(updatedUserDoc)
@@ -144,7 +147,7 @@ const AppContextProvider = ({children}) => {
 			if (userDoc.currentModule === 0) {
 				showInstruction("You are taking the first module of the two-module multistage test. Each module has 10 questions and you will have 15 minutes to answer for each module.")
 			} else {
-				showInstruction("You are taking second module of MST. Why was this called when you came from the login screen? Did you accidentally close the window after submitting the first booklet and come back?")
+				showInstruction("You are taking second module of the two-module multistage test. Why was this called when you came from the login screen? Did you accidentally close the window after submitting the first booklet and come back?")
 			}
 		}
 	}
@@ -153,15 +156,14 @@ const AppContextProvider = ({children}) => {
 		navigate("/test", {state: {timeRemainingInSeconds: timeRemainingInSeconds}})
 	}
 
-
 	const endTest = (message) => {
 		navigate('/end', {state: {msg: message}})
 
 	}
+
 	const showInstruction = (message)=>{
 		navigate('/instruction', {state: {msg: message}});
 	}
-
 
 	const value = {
 		currentQuestion,

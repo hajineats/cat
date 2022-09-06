@@ -1293,7 +1293,7 @@
       "type": "SHORT_ANSWER",
       "options": [],
       "image": "M032681A_question.png",
-      "text": "",
+      "text": "Please enter your answer as it appears on the graph (e.g. 8 am, 9 am, 10 am, etc)",
       "moduleNumber": 1,
       "correctAnswer": "10 am"
     },
