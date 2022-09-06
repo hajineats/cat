@@ -1,19 +1,14 @@
-package com.se701.cat.controller;
+package com.p4p.cat.controller;
 
-import com.se701.cat.dto.CreateUserDTO;
-import com.se701.cat.entity.User;
-import com.se701.cat.respository.UserRepository;
-import com.se701.cat.service.UserService;
+import com.p4p.cat.dto.CreateUserDTO;
+import com.p4p.cat.entity.User;
+import com.p4p.cat.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @CrossOrigin
 @RestController

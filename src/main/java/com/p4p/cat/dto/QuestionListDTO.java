@@ -1,6 +1,6 @@
-package com.se701.cat.dto;
+package com.p4p.cat.dto;
 
-import com.se701.cat.entity.Question;
+import com.p4p.cat.entity.Question;
 
 import java.util.List;
 import java.util.stream.Collectors;

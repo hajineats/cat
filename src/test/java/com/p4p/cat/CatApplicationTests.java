@@ -1,4 +1,4 @@
-package com.se701.cat;
+package com.p4p.cat;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

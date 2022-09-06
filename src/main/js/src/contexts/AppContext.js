@@ -63,7 +63,6 @@ const AppContextProvider = ({children}) => {
 		const updatedUserDoc = await getUserDocument(userDocument.id)
 		setUserDocument(updatedUserDoc)
 
-
 		// if the user has remaining shouldTakes, it's either the student needs to do second part of MST or has to come back on day 2
 		showInstructionAfterTestSubmission(updatedUserDoc)
 	}

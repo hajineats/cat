@@ -1,8 +1,8 @@
-package com.se701.cat.service;
+package com.p4p.cat.service;
 
-import com.se701.cat.entity.TestType;
-import com.se701.cat.entity.User;
-import com.se701.cat.respository.UserRepository;
+import com.p4p.cat.respository.UserRepository;
+import com.p4p.cat.entity.TestType;
+import com.p4p.cat.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

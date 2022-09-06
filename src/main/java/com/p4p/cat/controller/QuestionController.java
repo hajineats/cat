@@ -1,8 +1,8 @@
-package com.se701.cat.controller;
+package com.p4p.cat.controller;
 
-import com.se701.cat.dto.QuestionListDTO;
-import com.se701.cat.entity.Question;
-import com.se701.cat.service.QuestionService;
+import com.p4p.cat.dto.QuestionListDTO;
+import com.p4p.cat.service.QuestionService;
+import com.p4p.cat.entity.Question;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

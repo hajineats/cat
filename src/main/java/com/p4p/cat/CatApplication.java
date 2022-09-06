@@ -1,4 +1,4 @@
-package com.se701.cat;
+package com.p4p.cat;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,10 +1,9 @@
-package com.se701.cat.dto;
+package com.p4p.cat.dto;
 
-import com.se701.cat.entity.Question;
-import com.se701.cat.entity.QuestionOption;
-import com.se701.cat.entity.QuestionType;
+import com.p4p.cat.entity.Question;
+import com.p4p.cat.entity.QuestionOption;
+import com.p4p.cat.entity.QuestionType;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;

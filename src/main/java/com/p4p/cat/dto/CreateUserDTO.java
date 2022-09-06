@@ -1,4 +1,4 @@
-package com.se701.cat.dto;
+package com.p4p.cat.dto;
 
 public class CreateUserDTO {
     private int numOfUsers;

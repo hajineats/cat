@@ -1,6 +1,6 @@
-package com.se701.cat.service;
-import com.se701.cat.entity.Question;
-import com.se701.cat.respository.QuestionRepository;
+package com.p4p.cat.service;
+import com.p4p.cat.respository.QuestionRepository;
+import com.p4p.cat.entity.Question;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

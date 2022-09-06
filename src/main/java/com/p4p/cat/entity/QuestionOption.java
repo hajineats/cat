@@ -1,4 +1,4 @@
-package com.se701.cat.entity;
+package com.p4p.cat.entity;
 
 public class QuestionOption {
 

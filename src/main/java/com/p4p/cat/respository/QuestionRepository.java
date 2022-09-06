@@ -1,6 +1,6 @@
-package com.se701.cat.respository;
+package com.p4p.cat.respository;
 
-import com.se701.cat.entity.Question;
+import com.p4p.cat.entity.Question;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
