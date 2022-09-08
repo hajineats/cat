@@ -20,6 +20,13 @@ const AppContextProvider = ({children}) => {
 	const [currentResponse, setCurrentResponse] = usePersistedState("currentResponse",null);
 	const navigate = useNavigate()
 
+	const clearAllStates = ()=>{
+		setQuestionList([])
+		setUserDocument({})
+		setUserResponses({})
+		setCurrentQuestion(null)
+		setCurrentResponse(null)
+	}
 	useEffect(() => {
 		if(Object.keys(userDocument).length === 0){
 			navigate('/')
@@ -41,6 +48,10 @@ const AppContextProvider = ({children}) => {
 
 	const handleLogin = async (userId) => {
 		const user = await getUserDocument(userId)
+		if(user.id !== userDocument.id){
+			clearAllStates()
+			window.localStorage.removeItem("time")
+		}
 		setUserDocument(user)
 
 		showInstructionAfterLogin(user)
