@@ -109,7 +109,7 @@
       "type": "SHORT_ANSWER",
       "moduleNumber": -1,
       "image": "",
-      "text": "Here is a pattern:\n3 – 3 = 0\n3 – 2 = 1\n3 – 1 = 2\n3 – 0 = 3\nWhat will the next line in the pattern be?\nEnter your answer in the form: a+b=c",
+      "text": "Here is a pattern:\n3–3=0\n3–2=1\n3–1=2\n3–0=3\nWhat will the next line in the pattern be?\nEnter your answer in the form: a+b=c",
       "correctAnswer": "3+1=4",
       "options": []
     },
