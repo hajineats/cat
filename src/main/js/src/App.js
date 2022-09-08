@@ -1,11 +1,9 @@
 import TestScreen from "./pages/TestScreen";
-import styled from "styled-components";
 import LoginScreen from "./pages/LoginScreen";
 import {AppContextProvider} from "./contexts/AppContext";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import InstructionScreen from "./pages/InstructionScreen";
 import EndScreen from "./pages/EndScreen";
-import {useEffect, useState} from "react";
 
 function App() {
 
