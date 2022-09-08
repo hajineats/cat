@@ -4,11 +4,11 @@ import {useContext} from "react";
 
 const Container = styled.div`
   background-color: darkgray;
-  //height: 100px;
   padding: 10px;
   ${props => props.responded && css`
-    background-color: #fc8585;
+    outline: 3px solid black;
   `}
+  cursor: pointer;
 `
 export const Response = ({optionId, optionText, optionImage}) => {
 	const {addUserResponse, currentResponse} = useContext(AppContext)

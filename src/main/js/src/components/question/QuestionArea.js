@@ -19,7 +19,7 @@ const Image = styled.img`
 `
 export const QuestionArea = () => {
 	const {currentQuestion} = useContext(AppContext)
-	console.log(currentQuestion)
+
 	return (
 		<Container>
 			<Header>
@@ -28,7 +28,9 @@ export const QuestionArea = () => {
 			<Content>
 				{currentQuestion?.imageContent?.length !== 0 && <Image src={`\/images\/${currentQuestion?.imageContent}`}/>}
 				<br/>
-				{currentQuestion?.textContent}
+				{currentQuestion?.textContent.split('\n').map((text, i)=> {
+					return <p key={i}>{text}</p>
+				})}
 			</Content>
 		</Container>
 	)
