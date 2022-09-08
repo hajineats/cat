@@ -29,7 +29,6 @@ const ConfirmInput = styled.button`
 
 const InstructionScreen = () => {
     const {beginTest} = useContext(AppContext)
-
     const {state} = useLocation()
 
     return (
@@ -37,7 +36,7 @@ const InstructionScreen = () => {
             <TopBar/>
             <Content>
                 <Instructions>
-                    {state.msg}
+                    {state?.msg}
                 </Instructions>
             </Content>
 

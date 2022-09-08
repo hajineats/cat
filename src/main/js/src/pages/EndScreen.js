@@ -29,7 +29,7 @@ const EndScreen = () => {
             <TopBar/>
             <Content>
                 <Instructions>
-                    {state.msg}
+                    {state?.msg}
                 </Instructions>
             </Content>
 

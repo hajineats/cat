@@ -15,7 +15,7 @@ export const ResponseArea = () => {
 	const {currentQuestion} = useContext(AppContext)
 	return (
 		<Container>
-			{currentQuestion.type === "MULTIPLE_CHOICE" ? currentQuestion.questionOptions
+			{currentQuestion?.type === "MULTIPLE_CHOICE" ? currentQuestion?.questionOptions
 				.map(e => <Response
 					key={e.optionId}
 					optionId={e.optionId}

@@ -23,12 +23,12 @@ export const QuestionArea = () => {
 	return (
 		<Container>
 			<Header>
-				{currentQuestion.id}
+				{currentQuestion?.id}
 			</Header>
 			<Content>
-				{currentQuestion.imageContent.length != 0 && <Image src={`\/images\/${currentQuestion.imageContent}`}/>}
+				{currentQuestion?.imageContent?.length !== 0 && <Image src={`\/images\/${currentQuestion?.imageContent}`}/>}
 				<br/>
-				{currentQuestion.textContent}
+				{currentQuestion?.textContent}
 			</Content>
 		</Container>
 	)

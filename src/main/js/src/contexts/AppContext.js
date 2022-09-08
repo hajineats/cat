@@ -21,6 +21,9 @@ const AppContextProvider = ({children}) => {
 	const navigate = useNavigate()
 
 	useEffect(() => {
+		if(Object.keys(userDocument).length === 0){
+			navigate('/')
+		}
 		if (currentQuestion) {
 			setCurrentResponse(userResponses[currentQuestion.id])
 		}

@@ -5,6 +5,7 @@ import {AppContextProvider} from "./contexts/AppContext";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import InstructionScreen from "./pages/InstructionScreen";
 import EndScreen from "./pages/EndScreen";
+import {useEffect, useState} from "react";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
                     <Route path={"/instruction"}  element={<InstructionScreen />} />
                     <Route path={"/test"} element={<TestScreen />} />
                     <Route path={"/end"} element={<EndScreen />} />
+                    <Route path={"*"} element={<LoginScreen/>}/>
                 </Routes>
             </AppContextProvider>
         </BrowserRouter>

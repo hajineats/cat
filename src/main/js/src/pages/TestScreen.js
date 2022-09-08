@@ -2,10 +2,10 @@ import styled from "styled-components";
 import BottomBar from "../components/BottomBar";
 import TopBar from "../components/Topbar";
 import TestContent from "../components/TestContent";
-import {useContext} from "react";
+import {useContext, useEffect} from "react";
 import {AppContext} from "../contexts/AppContext";
 import Timer from "../components/widgets/Timer";
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import {confirmAlert} from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
@@ -25,11 +25,12 @@ const Button = styled.button`
 const TestScreen = () => {
     const {state} = useLocation()
     const {handleTestSubmission} = useContext(AppContext)
+    const cachedTime = JSON.parse(window.localStorage.getItem("time"))
 
     return (
         <Container>
-            <TopBar><Timer timeRemainingInSeconds={state.timeRemainingInSeconds}/></TopBar>
-            <TestContent>hello</TestContent>
+            <TopBar>{<Timer timeRemainingInSeconds={state?state.timeRemainingInSeconds:cachedTime}/>}</TopBar>
+            <TestContent />
             <BottomBar>
                 <Button onClick={() => confirmAlert({
                     title: 'Confirm Test Submission',
