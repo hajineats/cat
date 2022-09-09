@@ -223,7 +223,7 @@
       "moduleNumber": -1,
       "image": "M032352_image.png",
       "text": "The table above shows the shadow lengths of four bushes of different heights at 10 a.m. What is the shadow length at 10 a.m. of a bush that has a height of 50 centimeters?",
-      "correctAnswer": "",
+      "correctAnswer": "op3",
       "options": [
         {
           "id": "op1",
