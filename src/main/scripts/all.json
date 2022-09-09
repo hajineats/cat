@@ -316,7 +316,7 @@
       "moduleNumber": -1,
       "image": "",
       "text": "What is the sum of the three consecutive whole numbers with 2n as the middle number?",
-      "correctAnswer": "op3",
+      "correctAnswer": "op2",
       "options": [
         {
           "id": "op1",
@@ -1389,37 +1389,6 @@
         }
       ],
       "correctAnswer": "op1"
-    },
-    {
-      "id": "M032047",
-      "difficultyParameter": 0.57,
-      "type": "MULTIPLE_CHOICE",
-      "image": "",
-      "text": "What is the sum of the three consecutive whole numbers with 2n as the middle number?",
-      "moduleNumber": 2,
-      "options": [
-        {
-          "id": "op1",
-          "image": "",
-          "text": "6n+3"
-        },
-        {
-          "id": "op2",
-          "image": "",
-          "text": "6n"
-        },
-        {
-          "id": "op3",
-          "image": "",
-          "text": "6n-1"
-        },
-        {
-          "id": "op4",
-          "image": "",
-          "text": "6n-3"
-        }
-      ],
-      "correctAnswer": "op2"
     },
     {
       "id": "M042002",
