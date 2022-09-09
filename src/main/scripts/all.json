@@ -865,37 +865,6 @@
       "correctAnswer": "op3"
     },
     {
-      "id": "M042152",
-      "difficultyParameter": 0.37,
-      "type": "MULTIPLE_CHOICE",
-      "image": "M042152_question.png",
-      "text": "",
-      "moduleNumber": 0,
-      "options": [
-        {
-          "id": "op1",
-          "image": "M042152_op1.png",
-          "text": ""
-        },
-        {
-          "id": "op2",
-          "image": "M042152_op2.png",
-          "text": ""
-        },
-        {
-          "id": "op3",
-          "image": "M042152_op3.png",
-          "text": ""
-        },
-        {
-          "id": "op4",
-          "image": "M042152_op4.png",
-          "text": ""
-        }
-      ],
-      "correctAnswer": "op4"
-    },
-    {
       "id": "M042201",
       "difficultyParameter": 0.52,
       "type": "SHORT_ANSWER",
@@ -935,37 +904,6 @@
         }
       ],
       "correctAnswer": "op1"
-    },
-    {
-      "id": "M042269",
-      "difficultyParameter": 0.31,
-      "type": "MULTIPLE_CHOICE",
-      "image": "M042269_question.png",
-      "text": "",
-      "moduleNumber": 0,
-      "options": [
-        {
-          "id": "op1",
-          "image": "",
-          "text": "Each student in team B jumped farther than any student in team A."
-        },
-        {
-          "id": "op2",
-          "image": "",
-          "text": "After every student in team A jumped, there was a student in team B who jumped farther."
-        },
-        {
-          "id": "op3",
-          "image": "",
-          "text": "As a group, team B jumped farther than team A."
-        },
-        {
-          "id": "op4",
-          "image": "",
-          "text": "Some students in team A jumped farther than some students in team B."
-        }
-      ],
-      "correctAnswer": "op3"
     },
     {
       "id": "M032681C",
@@ -1226,37 +1164,6 @@
       "correctAnswer": "op2"
     },
     {
-      "id": "M032679",
-      "difficultyParameter": 0.43,
-      "type": "MULTIPLE_CHOICE",
-      "image": "M032679_question.png",
-      "text": "A piece of paper in the shape of a rectangle is folded in half as shown in the figure above. It is then cut along the dotted line, and the small piece that is cut is opened. What is the shape of the cutout figure?",
-      "moduleNumber": 1,
-      "options": [
-        {
-          "id": "op1",
-          "image": "",
-          "text": "an isosceles triangle"
-        },
-        {
-          "id": "op2",
-          "image": "",
-          "text": "two isosceles triangles"
-        },
-        {
-          "id": "op3",
-          "image": "",
-          "text": "a right triangle"
-        },
-        {
-          "id": "op4",
-          "image": "",
-          "text": "an equilateral triangle"
-        }
-      ],
-      "correctAnswer": "op1"
-    },
-    {
       "id": "M042260",
       "difficultyParameter": 0.20,
       "type": "MULTIPLE_CHOICE",
@@ -1286,16 +1193,6 @@
         }
       ],
       "correctAnswer": "op2"
-    },
-    {
-      "id": "M032681A",
-      "difficultyParameter": 0.34,
-      "type": "SHORT_ANSWER",
-      "options": [],
-      "image": "M032681A_question.png",
-      "text": "Please enter your answer as it appears on the graph (e.g. 8 am, 9 am, 10 am, etc)",
-      "moduleNumber": 1,
-      "correctAnswer": "10 am"
     },
     {
       "id": "M042179",
@@ -1535,16 +1432,6 @@
       "correctAnswer": "50"
     },
     {
-      "id": "M042169A",
-      "difficultyParameter": 0.62,
-      "type": "SHORT_ANSWER",
-      "options": [],
-      "image": "",
-      "text": "The Real Burger Company owns 5 restaurants. The numbers of staff members employed in its 5 restaurants are: 12, 18, 19, 21, and 30 people. What is the mean number of staff members in the 5 restaurants?",
-      "moduleNumber": 2,
-      "correctAnswer": "20"
-    },
-    {
       "id": "M042270",
       "difficultyParameter": 0.54,
       "type": "MULTIPLE_CHOICE",
@@ -1741,37 +1628,6 @@
       "correctAnswer": "op1"
     },
     {
-      "id": "M032324",
-      "difficultyParameter": 0.69,
-      "type": "MULTIPLE_CHOICE",
-      "image": "",
-      "text": "Points A, B, and C lie on a line and B is between A and C. If AB = 10 cm and BC = 5.2 cm, what is the distance between the midpoints of AB and BC?",
-      "moduleNumber": 3,
-      "options": [
-        {
-          "id": "op1",
-          "image": "",
-          "text": "2.4cm"
-        },
-        {
-          "id": "op2",
-          "image": "",
-          "text": "2.6cm"
-        },
-        {
-          "id": "op3",
-          "image": "",
-          "text": "5.0cm"
-        },
-        {
-          "id": "op4",
-          "image": "",
-          "text": "7.6cm"
-        }
-      ],
-      "correctAnswer": "op4"
-    },
-    {
       "id": "M032331",
       "difficultyParameter": 0.74,
       "type": "MULTIPLE_CHOICE",
@@ -1798,37 +1654,6 @@
           "id": "op4",
           "image": "",
           "text": "420 degrees"
-        }
-      ],
-      "correctAnswer": "op2"
-    },
-    {
-      "id": "M032721",
-      "difficultyParameter": 0.58,
-      "type": "MULTIPLE_CHOICE",
-      "image": "M032721_question.png",
-      "text": "",
-      "moduleNumber": 3,
-      "options": [
-        {
-          "id": "op1",
-          "image": "",
-          "text": "2003"
-        },
-        {
-          "id": "op2",
-          "image": "",
-          "text": "2004"
-        },
-        {
-          "id": "op3",
-          "image": "",
-          "text": "2005"
-        },
-        {
-          "id": "op4",
-          "image": "",
-          "text": "2006"
         }
       ],
       "correctAnswer": "op2"
