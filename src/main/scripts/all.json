@@ -310,33 +310,33 @@
       ]
     },
     {
-      "id": "M032047",
-      "difficultyParameter": 0.57,
+      "id": "M032477",
+      "difficultyParameter": 0.54,
       "type": "MULTIPLE_CHOICE",
       "moduleNumber": -1,
       "image": "",
-      "text": "What is the sum of the three consecutive whole numbers with 2n as the middle number?",
-      "correctAnswer": "op2",
+      "text": "The taxi company has a basic charge of 25 zeds and a charge of 0.2 zeds for each kilometer the taxi is driven. Which of these represents the cost in zeds to hire a taxi for a trip of n kilometers?",
+      "correctAnswer": "op1",
       "options": [
         {
           "id": "op1",
           "image": "",
-          "text": "6n + 3"
+          "text": "25 + 0.2n"
         },
         {
           "id": "op2",
           "image": "",
-          "text": "6n"
+          "text": "25 × 0.2n"
         },
         {
           "id": "op3",
           "image": "",
-          "text": "6n − 1 "
+          "text": "0.2 × (25 + n)"
         },
         {
           "id": "op4",
           "image": "",
-          "text": "6n − 3"
+          "text": "0.2 × 25 + n"
         }
       ]
     },
@@ -1288,6 +1288,37 @@
       "correctAnswer": "op1"
     },
     {
+      "id": "M032047",
+      "difficultyParameter": 0.57,
+      "type": "MULTIPLE_CHOICE",
+      "moduleNumber": 2,
+      "image": "",
+      "text": "What is the sum of the three consecutive whole numbers with 2n as the middle number?",
+      "correctAnswer": "op2",
+      "options": [
+        {
+          "id": "op1",
+          "image": "",
+          "text": "6n + 3"
+        },
+        {
+          "id": "op2",
+          "image": "",
+          "text": "6n"
+        },
+        {
+          "id": "op3",
+          "image": "",
+          "text": "6n − 1 "
+        },
+        {
+          "id": "op4",
+          "image": "",
+          "text": "6n − 3"
+        }
+      ]
+    },
+    {
       "id": "M042002",
       "difficultyParameter": 0.59,
       "type": "MULTIPLE_CHOICE",
@@ -1370,7 +1401,7 @@
         {
           "id": "op3",
           "image": "M032419_op3.png",
-          "text": "11 and 14"
+          "text": ""
         },
         {
           "id": "op4",
@@ -1488,7 +1519,7 @@
         {
           "id": "op4",
           "image": "",
-          "text": "none of the options"
+          "text": "None of the options"
         }
       ],
       "correctAnswer": "op1"
