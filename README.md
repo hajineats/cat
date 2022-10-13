@@ -60,13 +60,13 @@ The application is deployed on an AWS EC2 instance setup with Java, R and mstR. 
 ## Brief Overview of Features
 1. Administers both fixed length test (FL) and multistage test (MST)
 2. FL has 30 questions, 45 minutes.
-3. Our MST design is 2 stages.
-4. MST first stage has one testlet, whose result determines the testlet in stage 2
-5. MST second stage has 3 testlets - easy, medium, difficult
-6. All MST testlets have 10 questions, 15 minutes
-7. We use MR2JS(MongoDB, React, R, Java, Spring Boot) stack. You can pronounce it as 'Mr 2 Js'
-8. It has crash/reload recovery, so your progress or login status won't be lost
-9. Made without UI frameworks, so the UI design is quite simple and barebone
+3. Our MST design is 2 stages. Every candidate receives the same testlet in the first stage. Based on their result, they are routed to one of 3 testlets (easy, medium, difficult) in the second stage.
+4. All MST testlets have 10 questions, 15 minutes
+5. Leverages mstR R package for MST test path.
+6. We use MR2JS(MongoDB, React, R, Java, Spring Boot) stack. You can pronounce it as 'Mr 2 Js'
+7. It has crash/reload recovery, so your progress or login status won't be lost
+8. Made without UI frameworks, so the UI design is quite simple and barebone
+
 
 <!-- TOC --><a name="screenshots"></a>
 ## Screenshots
