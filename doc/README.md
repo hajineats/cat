@@ -4,6 +4,7 @@ This folder contains documentations and artifacts we have generated from the dur
 
 | Folder | Contains |
 |-------------|----------|
+| [`Development`](Development) | API Design, Database Schema |
 | [`Presentations`](Presentations) | Tech demo video, Mid-year Seminar Presentation |
 | [`Reports`](Reports) | Literature Review, Final Report (**Honours Dissertation**) |
 | [`Testing`](Testing) | Post-test Survey Results, Test Responses and Scores from Our Pilot Test, Allocation of questions to testlets |
