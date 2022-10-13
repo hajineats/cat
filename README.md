@@ -1,8 +1,8 @@
 # Project 52: Computer Adaptive Testing in Educational Assessment
 
-Computer adaptive testing (CAT) is a form of test which uses algorithms to adjust its difficulty based on the ability of the user. This project focuses on a form of CAT known as multistage testing (MST) and aims to compare the effectiveness of MST against traditional fixed length tests by implementing an online testing platform supporting both testing paradigms. 
+Computer adaptive testing (CAT) is a form of test which uses algorithms to adjust its difficulty based on the ability of the user. This project focuses on a form of CAT known as multistage testing (MST) and aims to compare the effectiveness of MST against traditional fixed length tests by implementing an online testing platform supporting both testing paradigms. The R package, mstR, is used to implement the features of the multistage test (e.g. ability estimation and module selection) which is integrated with the backend via RCaller.
 
-The backend is created in Spring Boot and can be found in src/main/java/com/p4p/cat. 
+The backend is created in Spring Boot can be found in src/main/java/com/p4p/cat. 
 
 The frontend uses React and can be found in src/main/js/.
 
