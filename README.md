@@ -1,5 +1,5 @@
 <!-- TOC --><a name="project-52-computer-adaptive-testing-in-educational-assessment"></a>
-# Project 52: Computer Adaptive Testing in Educational Assessment
+# Project 52: Computer Adaptive Testing in Educational Assessment 🐱
 
 Computer adaptive testing (CAT) is a form of testing which uses algorithms to adjust its difficulty based on the ability of the user with the aim of providing more precise ability measurements. This project focuses on a form of CAT known as multistage testing (MST) and aims to compare the effectiveness of MST against traditional fixed length tests by implementing an online testing platform supporting both testing paradigms. The R package, mstR, is used to implement the features of the multistage test (e.g. ability estimation and module selection) which is integrated with the backend via RCaller.
 
@@ -8,13 +8,12 @@ Computer adaptive testing (CAT) is a form of testing which uses algorithms to ad
 | [`src/main/java/com/p4p/cat`](src/main/java/com/p4p/cat) | The backend created in Spring Boot (Java), R, MongoDB |
 | [`src/main/js`](src/main/js) | The frontend created in React |
 | [`src/main/scripts/all.json`](src/main/scripts/all.json) | The questions used to create the tests, from the Trends in International Mathematics and Science Study (TIMSS) 2011 Grade 8 mathematics assessment. |
-
+| [`doc`](doc) | Project design, development, and testing process, and our **honours dissertations**! |
 ---
 ## Table of Contents
 
 <!-- TOC start -->
 - [Project 52: Computer Adaptive Testing in Educational Assessment](#project-52-computer-adaptive-testing-in-educational-assessment)
-    * [Research Documents](#research-documents)
     * [Project Setup](#project-setup)
     * [Build Process](#build-process)
     * [Deployment](#deployment)
@@ -33,9 +32,6 @@ Computer adaptive testing (CAT) is a form of testing which uses algorithms to ad
 
 ---
 
-<!-- TOC --><a name="research-documents"></a>
-## Research Documents
-For more information about the project design, development, and testing process, view the [`doc`](doc) folder which contains all the relevant material.
 
 <!-- TOC --><a name="project-setup"></a>
 ## Project Setup
