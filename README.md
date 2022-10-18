@@ -4,7 +4,7 @@
 Computer adaptive testing (CAT) is a form of testing which uses algorithms to adjust its difficulty based on the ability of the user with the aim of providing more precise ability measurements. This project focuses on a form of CAT known as multistage testing (MST) and aims to compare the effectiveness of MST against traditional fixed length tests by implementing an online testing platform supporting both testing paradigms. The R package, mstR, is used to implement the features of the multistage test (e.g. ability estimation and module selection) which is integrated with the backend via RCaller.
 
 ## Compendium resources
-[doc](doc) contains our compendium resources (**project design, development, and testing process, and our honours dissertations!**) 
+[`doc`](doc) contains our compendium resources (**project design, development, and testing process, and our honours dissertations!**) 
 
 ## Backend
 [`src/main/java/com/p4p/cat`](src/main/java/com/p4p/cat) contains the backend created in Spring Boot (Java), R, MongoDB
